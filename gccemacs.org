@@ -1,0 +1,141 @@
+* lap
+  output of comp-lap
+#+begin_src elisp
+
+#s(comp-func-l
+   :name foo
+   :c-name "F666f6f_foo_0"
+   :byte-func #f(compiled-function () #<bytecode 0x1f4000170cb5>)
+   :doc nil
+   :int-spec nil
+   :lap ((byte-constant 123 . 0) (byte-return . 0))
+   :ssa-status nil
+   :frame-size 1
+   :blocks #<hash-table eql 0/65 0x1e09afb>
+   :lap-block #<hash-table equal 0/65 0x998945>
+   :edges nil
+   :block-cnt-gen (closure ((n . -1) . #1=(cl-struct-comp-edge-tags
+                                           cl-struct-comp-latch-tags
+                                           cl-struct-comp-block-lap-tags
+                                           cl-struct-comp-block-tags
+                                           cl-struct-comp-nargs-tags
+                                           cl-struct-comp-args-tags
+                                           cl-struct-comp-args-base-tags
+                                           cl-struct-comp-ctxt-tags
+                                           cl-struct-comp-data-container-tags
+                                           t)
+                            ) . #2=(nil (setq n (1+ n))))
+   :edge-cnt-gen (closure ((n . -1) . #1#) . #2#)
+   :has-non-local nil
+   :array-h #<hash-table eql 1/65 0x9b7783>
+   :speed 2
+   :pure nil
+   :args #s(comp-args
+            :min 0
+            :max 0))
+#+end_src
+
+* limplify
+  (defun foo (x y) (+ x y))
+  comp-ctxt
+#+begin_src elisp
+
+(fn X Y) nil nil
+((byte-stack-ref . 1) (byte-stack-ref . 1) (byte-plus . 0) (byte-return . 0))
+ t 4
+ #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125
+ data
+ (entry
+ #s(comp-block-lap entry
+ ((comment "Lisp function: foo")
+ (set-par-to-local #s(comp-mvar 28180332 0 nil nil nil) 0)
+ (set-par-to-local #s(comp-mvar 29898452 1 nil nil nil) 1)
+ (jump bb_0))
+ nil
+ nil
+ (#s(comp-edge #2 #s(comp-block-lap bb_0
+ ((comment "LAP op byte-stack-ref")
+ (set #s(comp-mvar 27590732 2 nil nil nil)
+      #s(comp-mvar 28180332 0 nil nil nil))
+ (comment "LAP op byte-stack-ref")
+ (set #s(comp-mvar 13418998 3 nil nil nil)
+      #s(comp-mvar 29898452 1 nil nil nil))
+ (comment "LAP op byte-plus")
+ (set #s(comp-mvar 28878218 2 nil nil number)
+        (callref + #s(comp-mvar 27590732 2 nil nil nil)
+                   #s(comp-mvar 13418998 3 nil nil nil)))
+ (comment "LAP op byte-return")
+ (return #s(comp-mvar 28878218 2 nil nil number)))
+ nil
+ (#4)
+ nil
+ nil
+ #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ())
+ nil
+ [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 28878218 2 nil nil number) #s(comp-mvar 13418998 3 nil nil nil)]
+ 1
+ 0)
+ 0))
+ nil
+ #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ())
+ nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 27954822 2 nil nil nil) #s(comp-mvar 27954836 3 nil nil nil)]
+ -1 nil)
+ bb_0
+ #s(comp-block-lap bb_0 ((comment "LAP op byte-stack-ref") (set #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 28180332 0 nil nil nil)) (comment "LAP op byte-stack-ref") (set #s(comp-mvar 13418998 3 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil)) (comment "LAP op byte-plus") (set #s(comp-mvar 28878218 2 nil nil number) (callref + #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 13418998 3 nil nil nil))) (comment "LAP op byte-return") (return #s(comp-mvar 28878218 2 nil nil number))) nil (#s(comp-edge #s(comp-block-lap entry ((comment "Lisp function: foo") (set-par-to-local #s(comp-mvar 28180332 0 nil nil nil) 0) (set-par-to-local #s(comp-mvar 29898452 1 nil nil nil) 1) (jump bb_0)) nil nil (#4) nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 27954822 2 nil nil nil) #s(comp-mvar 27954836 3 nil nil nil)] -1 nil) #2 0)) nil nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 28878218 2 nil nil number) #s(comp-mvar 13418998 3 nil nil nil)] 1 0)))
+
+ #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ())
+ (#s(comp-edge #s(comp-block-lap entry ((comment "Lisp function: foo") (set-par-to-local #s(comp-mvar 28180332 0 nil nil nil) 0) (set-par-to-local #s(comp-mvar 29898452 1 nil nil nil) 1) (jump bb_0)) nil nil (#2) nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 27954822 2 nil nil nil) #s(comp-mvar 27954836 3 nil nil nil)] -1 nil) #s(comp-block-lap bb_0 ((comment "LAP op byte-stack-ref") (set #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 28180332 0 nil nil nil)) (comment "LAP op byte-stack-ref") (set #s(comp-mvar 13418998 3 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil)) (comment "LAP op byte-plus") (set #s(comp-mvar 28878218 2 nil nil number) (callref + #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 13418998 3 nil nil nil))) (comment "LAP op byte-return") (return #s(comp-mvar 28878218 2 nil nil number))) nil (#2) nil nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 28878218 2 nil nil number) #s(comp-mvar 13418998 3 nil nil nil)] 1 0) 0))
+ #[0 "À¢T " [(0)] 2]
+ #[0 "À¢T " [(0)] 2]
+ nil
+ #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data (0 4))
+ 2
+ nil
+ #s(comp-args 2 2))
+
+#+end_src
+
+* loop
+
+(let ((i 0))
+(loop i 1 to 1000000000
+      do (incf i))
+)
+
+* pure?
+  (defun a ()
+     (b))
+
+  (defun b ()
+     (c))
+
+  (defun c ()
+     1)
+
+  (setq foo (myfunc 1))
+  (myfunc 1)
+
+* bb
+
+
+  #+begin_src elisp
+  (defun my-fun (p1)
+    (let ((a 1))
+      (if p1
+          (setf a 2)
+        (setf a 4))
+      (print a)))
+
+(my-fun nil)
+(fmakunbound 'my-fun)
+
+  #+end_src
+
+  (let ((a 1))
+    (if (foo)
+      (print "hi")
+      (print a)))
+
+* refs
+  - https://en.wikipedia.org/wiki/Static_single_assignment_form#Converting_to_SSA
+  - https://www.cs.rice.edu/~keith/EMBED/dom.pdf
