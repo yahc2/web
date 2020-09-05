@@ -1,8 +1,8 @@
 
 ((org-publish-project-alist .
                             '(("org"
-                               :base-directory "~/programmingStuff/yahc2/web/"
-                               :publishing-directory "~/programmingStuff/yahc2/web/docs/"
+                               :base-directory "./"
+                               :publishing-directory "./docs/"
                                :publishing-function org-html-publish-to-html
                                :section-numbers nil
                                :table-of-contents nil

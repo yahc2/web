@@ -1,5 +1,4 @@
 * Topics
-** Red
 ** gccemacs
    [[./gccemacs.org]]
 ** Q#
