@@ -2,7 +2,7 @@
 ((org-publish-project-alist .
                             '(("org"
                                :base-directory "~/programmingStuff/yahc2/web/"
-                               :publishing-directory "~/programmingStuff/yahc2/web/out/"
+                               :publishing-directory "~/programmingStuff/yahc2/web/docs/"
                                :publishing-function org-html-publish-to-html
                                :section-numbers nil
                                :table-of-contents nil
