@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-10 Thu 15:08 -->
+<!-- 2020-09-10 Thu 16:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -246,6 +246,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -253,44 +275,120 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7e0c780">Topics</a>
+<li><a href="#orga845a42">Quantum Computing - Conceptual Introduction</a>
 <ul>
-<li><a href="#orgbe0c185">gccemacs</a></li>
-<li><a href="#orgfb8c3f7">Quantum Computing</a></li>
-<li><a href="#org8d2b544">doom-emacs</a></li>
+<li><a href="#orgc7b2d8c">Preliminaries - What Is QC?</a>
+<ul>
+<li><a href="#org9c4abdf">Building Blocks</a></li>
+<li><a href="#orgd6bfca8">Mathematics of QC</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7e0c780" class="outline-2">
-<h2 id="org7e0c780">Topics</h2>
-<div class="outline-text-2" id="text-org7e0c780">
+<div id="outline-container-orga845a42" class="outline-2">
+<h2 id="orga845a42">Quantum Computing - Conceptual Introduction</h2>
+<div class="outline-text-2" id="text-orga845a42">
 </div>
-<div id="outline-container-orgbe0c185" class="outline-3">
-<h3 id="orgbe0c185">gccemacs</h3>
-<div class="outline-text-3" id="text-orgbe0c185">
-<p>
-<a href="./gccemacs.html">./gccemacs.html</a>
-</p>
+<div id="outline-container-orgc7b2d8c" class="outline-3">
+<h3 id="orgc7b2d8c">Preliminaries - What Is QC?</h3>
+<div class="outline-text-3" id="text-orgc7b2d8c">
 </div>
+<div id="outline-container-org9c4abdf" class="outline-4">
+<h4 id="org9c4abdf">Building Blocks</h4>
+<div class="outline-text-4" id="text-org9c4abdf">
 </div>
-<div id="outline-container-orgfb8c3f7" class="outline-3">
-<h3 id="orgfb8c3f7">Quantum Computing</h3>
-<div class="outline-text-3" id="text-orgfb8c3f7">
-<p>
-<a href="quantum-computing.html">Conceptual Introduction</a>
-</p>
+<ul class="org-ul">
+<li><a id="orgd928294"></a>Qubits<br />
+<div class="outline-text-5" id="text-orgd928294">
+<ul class="org-ul">
+<li>Short for <code>quantum bits</code>.</li>
+<li>Just like classical bits they need a well-defined physical
+representation, of which there are many (e.g. photonic
+polarization, electron spin, nuclear spin, Josephson junction,
+ion trap, etc.)</li>
+<li>Unlike classical bits, they exist in a quantum superposition of
+available basis states (more on this later)</li>
+<li>On the computational level we operate on <code>logical qubits</code>,
+which can comprise up to 1000 physical qubits (depending on the
+quantum error correction scheme)</li>
+<li>An array of qubits is typically referred to as a <code>quantum
+       register</code></li>
+</ul>
 </div>
+</li>
+<li><a id="org8b74992"></a>Quantum Gates<br />
+<div class="outline-text-5" id="text-org8b74992">
+<ul class="org-ul">
+<li>QC analogues of logic gates</li>
+<li>Mathematically they are represented by <code>unitary</code> matrices (more
+on this later)</li>
+<li>Unlike logic gates in classical computing, they are reversible
+(cf. Feynman's and Fredkin's remarks on classical
+reversibility)</li>
+<li>n-qubit gate is represented by a \(2^n \times 2^n\) unitary matrix
+(this dimensionality results from the properties of tensor products)</li>
+<li>Quantum gates can transform single or multiple qubits, conflate
+several qubits with each other (quantum entanglement),
+conditionalize certain actions, etc.</li>
+</ul>
 </div>
-<div id="outline-container-org8d2b544" class="outline-3">
-<h3 id="org8d2b544">doom-emacs</h3>
+</li>
+<li><a id="orgbbc4b6e"></a>Measurement<br />
+<div class="outline-text-5" id="text-orgbbc4b6e">
+<ul class="org-ul">
+<li>Irreversible operation on a qubit or quantum register</li>
+<li>Measurements are performed relative to a basis of base vectors</li>
+<li>Measurement can only yield one of the constituent <code>pure states</code>
+(i.e. in the case of an already pure state the result will be
+known in advance)</li>
+<li>The probability of arriving at a pure state is proportional to
+the squared modulus of its (complex) amplitude (more on this
+later)</li>
+</ul>
+</div>
+</li>
+<li><a id="orgde70dee"></a>Ancillary qubits<br />
+<div class="outline-text-5" id="text-orgde70dee">
+<ul class="org-ul">
+<li>Because reversibility sometimes requires outputting additional
+information, it may be necessary to use additional, so called
+<code>ancillary</code> qubits, which will store this information and can
+later be discarded.</li>
+<li>Because sometimes the ancillary qubits get entangled with the
+main thread of computation, it is not always possible to just
+discard them. In such cases one might need to perform
+<code>uncomputation</code>, which is a unitary way to <code>undo</code> the
+entanglement.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5ab7764"></a>Decoherence<br />
+<div class="outline-text-5" id="text-org5ab7764">
+<ul class="org-ul">
+<li>Unwanted, but unavoidable (?) interference between
+computational elements (qubits) and their (quantum-mechanical)
+surroundings</li>
+<li>Decoherence boils down to physical qubits getting entangled
+with the environment</li>
+<li>Attempts to limit decoherence involve cryogenic environments,
+shielding, quantum error correction, etc.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgd6bfca8" class="outline-4">
+<h4 id="orgd6bfca8">Mathematics of QC</h4>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Wojciech Gac</p>
-<p class="date">Created: 2020-09-10 Thu 15:08</p>
+<p class="date">Created: 2020-09-10 Thu 16:46</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

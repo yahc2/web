@@ -1,0 +1,56 @@
+* Quantum Computing - Conceptual Introduction
+** Preliminaries - What Is QC?
+*** Building Blocks
+**** Qubits
+     - Short for =quantum bits=.
+     - Just like classical bits they need a well-defined physical
+       representation, of which there are many (e.g. photonic
+       polarization, electron spin, nuclear spin, Josephson junction,
+       ion trap, etc.)
+     - Unlike classical bits, they exist in a quantum superposition of
+       available basis states (more on this later)
+     - On the computational level we operate on =logical qubits=,
+       which can comprise up to 1000 physical qubits (depending on the
+       quantum error correction scheme)
+     - An array of qubits is typically referred to as a =quantum
+       register=
+**** Quantum Gates
+     - QC analogues of logic gates
+     - Mathematically they are represented by =unitary= matrices (more
+       on this later)
+     - Unlike logic gates in classical computing, they are reversible
+       (cf. Feynman's and Fredkin's remarks on classical
+       reversibility)
+     - n-qubit gate is represented by a $2^n \times 2^n$ unitary matrix
+       (this dimensionality results from the properties of tensor products)
+     - Quantum gates can transform single or multiple qubits, conflate
+       several qubits with each other (quantum entanglement),
+       conditionalize certain actions, etc.
+**** Measurement
+     - Irreversible operation on a qubit or quantum register
+     - Measurements are performed relative to a basis of base vectors
+     - Measurement can only yield one of the constituent =pure states=
+       (i.e. in the case of an already pure state the result will be
+       known in advance)
+     - The probability of arriving at a pure state is proportional to
+       the squared modulus of its (complex) amplitude (more on this
+       later)
+**** Ancillary qubits
+     - Because reversibility sometimes requires outputting additional
+       information, it may be necessary to use additional, so called
+       =ancillary= qubits, which will store this information and can
+       later be discarded.
+     - Because sometimes the ancillary qubits get entangled with the
+       main thread of computation, it is not always possible to just
+       discard them. In such cases one might need to perform
+       =uncomputation=, which is a unitary way to =undo= the
+       entanglement.
+**** Decoherence
+     - Unwanted, but unavoidable (?) interference between
+       computational elements (qubits) and their (quantum-mechanical)
+       surroundings
+     - Decoherence boils down to physical qubits getting entangled
+       with the environment
+     - Attempts to limit decoherence involve cryogenic environments,
+       shielding, quantum error correction, etc.
+*** Mathematics of QC

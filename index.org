@@ -1,5 +1,6 @@
 * Topics
 ** gccemacs
    [[./gccemacs.org]]
-** Q#
+** Quantum Computing
+   [[file:quantum-computing.org][Conceptual Introduction]]
 ** doom-emacs
