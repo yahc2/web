@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-10 Thu 17:42 -->
+<!-- 2020-09-10 Thu 18:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -281,6 +281,7 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#org9c4abdf">Building Blocks</a></li>
 <li><a href="#orgd6bfca8">Mathematics of QC</a></li>
+<li><a href="#orgcd31a54">Examples of Quantum Circuits</a></li>
 </ul>
 </li>
 <li><a href="#org0a77bb7">Useful Resources</a>
@@ -392,6 +393,143 @@ shielding, quantum error correction, etc.</li>
 </div>
 <div id="outline-container-orgd6bfca8" class="outline-4">
 <h4 id="orgd6bfca8">Mathematics of QC</h4>
+<div class="outline-text-4" id="text-orgd6bfca8">
+</div>
+<ul class="org-ul">
+<li><a id="orgba7cde6"></a>Basic postulates of Quantum Mechanics<br /></li>
+<li><a id="org8d8fbb1"></a>Mathematical concepts<br />
+<ul class="org-ul">
+<li><a id="org56ce7df"></a>Ket (vector)<br />
+<div class="outline-text-6" id="text-org56ce7df">
+<ul class="org-ul">
+<li>An ordinary vector can be represented sybolically as a <code>ket</code>
+(after Dirac)</li>
+<li>Notational equivalence:</li>
+</ul>
+<p>
+\[|a\rangle \equiv \begin{bmatrix}
+      a_1\\
+      a_2\\
+      \vdots\\
+      a_n\\
+      \end{bmatrix}
+      \]
+</p>
+</div>
+</li>
+<li><a id="orgaea73ba"></a>Bra (covector)<br />
+<div class="outline-text-6" id="text-orgaea73ba">
+<ul class="org-ul">
+<li>An object dual to a vector (a <code>covector</code> or <code>form</code>) can be
+represented sybolically as a <code>bra</code></li>
+<li>Hermitian conjugate is the conversion operation between bras
+and kets</li>
+<li>Notational equivalence:</li>
+</ul>
+<p>
+\[\langle a| \equiv {|a\rangle}^\dagger \equiv \begin{bmatrix}
+      a_1\\
+      a_2\\
+      \vdots\\
+      a_n\\
+      \end{bmatrix}^\dagger \equiv \begin{bmatrix} a_1^* & a_2^* & \cdots & a_n^*\end{bmatrix}
+      \]
+</p>
+</div>
+</li>
+<li><a id="orgccbe051"></a>Hermitian adjoint (or conjugate)<br />
+<div class="outline-text-6" id="text-orgccbe051">
+<ul class="org-ul">
+<li>A combination of matrix transposition and taking complex
+conjugates of all its elements: \(A^\dagger = (A^T)^* =
+        (A^*)^T\)</li>
+</ul>
+</div>
+</li>
+<li><a id="org3f1a262"></a>Unitarity<br />
+<div class="outline-text-6" id="text-org3f1a262">
+<ul class="org-ul">
+<li>A matrix is unitary when \(AA^\dagger = A^\dagger A = I\)</li>
+<li>Unitary matrices preserve vector lengths and are thus
+generalizations of rotations \(\langle a A|A a\rangle = \langle
+        a|A^\dagger A|a\rangle = \langle a|I|a\rangle = \langle
+        a|a\rangle\)</li>
+<li>All quantum gates satisfy this property</li>
+<li>Unitary matrices have eigenvalues of modulus \(1\) (shown <a href="https://math.stackexchange.com/questions/1717713/show-that-the-eigenvalues-of-a-unitary-matrix-have-modulus-1">here</a>)</li>
+</ul>
+</div>
+</li>
+<li><a id="org97f9426"></a>Hermiticity (self-adjointedness)<br />
+<div class="outline-text-6" id="text-org97f9426">
+<ul class="org-ul">
+<li>A Hermitian (self-adjoint) matrix is identical to its
+Hermitian conjugate</li>
+<li>All eigenvalues of a Hermitian matrix are real</li>
+<li>Because of the above, physical observables (i.e. measurable
+properties of a system) are represented as Hermitian operators</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgcd31a54" class="outline-4">
+<h4 id="orgcd31a54">Examples of Quantum Circuits</h4>
+<div class="outline-text-4" id="text-orgcd31a54">
+</div>
+<ul class="org-ul">
+<li><a id="orgff18591"></a><a href="https://algassert.com/quirk#circuit=%7B%22cols%22:%5B%5B%22X%22,%22X%22%5D%5D,%22init%22:%5B0,1%5D%7D">NOT gate</a><br />
+<div class="outline-text-5" id="text-orgff18591">
+<p>
+Acting on two separate qubits set to \(|0\rangle\) and \(|1\rangle\)
+respectively.
+</p>
+</div>
+</li>
+<li><a id="org79a18d9"></a><a href="https://algassert.com/quirk#circuit=%7B%22cols%22:%5B%5B%22H%22%5D%5D%7D">Hadamard gate</a><br />
+<div class="outline-text-5" id="text-org79a18d9">
+<p>
+Converting a pure state into a superposition
+</p>
+</div>
+</li>
+<li><a id="orgb060bd9"></a><a href="https://algassert.com/quirk#circuit=%7B%22cols%22:%5B%5B%22H%22%5D,%5B%22H%22%5D%5D%7D">2 Hadamard gates</a><br />
+<div class="outline-text-5" id="text-orgb060bd9">
+<p>
+&#x2026; and back again
+</p>
+</div>
+</li>
+<li><a id="org4c5efa5"></a><a href="https://algassert.com/quirk#circuit=%7B%22cols%22:%5B%5B%22%E2%80%A2%22,%22X%22%5D%5D%7D">CNOT gate</a><br />
+<div class="outline-text-5" id="text-org4c5efa5">
+<p>
+Controlled NOT
+</p>
+</div>
+</li>
+<li><a id="org91f8e45"></a><a href="https://algassert.com/quirk#circuit=%7B%22cols%22:%5B%5B%22H%22%5D,%5B%22%E2%80%A2%22,%22X%22%5D%5D%7D">Bell state</a><br />
+<div class="outline-text-5" id="text-org91f8e45">
+<p>
+Simplest instance of quantum entanglement
+</p>
+</div>
+</li>
+<li><a id="org6b619a4"></a><a href="https://algassert.com/quirk#circuit=%7B%22cols%22:%5B%5B%22Swap%22,%22Swap%22%5D%5D,%22init%22:%5B0,1%5D%7D">SWAP gate</a><br />
+<div class="outline-text-5" id="text-org6b619a4">
+<p>
+Exchange two qubits connected by the gate
+</p>
+</div>
+</li>
+<li><a id="orgd9228dd"></a><a href="https://algassert.com/quirk#circuit=%7B%22cols%22:%5B%5B%22Z%22,%22Z%22%5D%5D,%22init%22:%5B0,1%5D%7D">Z gate</a><br />
+<div class="outline-text-5" id="text-orgd9228dd">
+<p>
+Negates the \(|1\rangle\) state
+</p>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-org0a77bb7" class="outline-3">
@@ -554,7 +692,7 @@ A koan-like approach to teaching QC and Q#
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Wojciech Gac</p>
-<p class="date">Created: 2020-09-10 Thu 17:42</p>
+<p class="date">Created: 2020-09-10 Thu 18:56</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

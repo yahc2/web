@@ -1,3 +1,4 @@
+#+LATEX_HEADER: \usepackage{amsmath}
 * Quantum Computing - Conceptual Introduction
 ** Preliminaries - What Is QC?
 *** Building Blocks
@@ -54,6 +55,66 @@
      - Attempts to limit decoherence involve cryogenic environments,
        shielding, quantum error correction, etc.
 *** Mathematics of QC
+**** Basic postulates of Quantum Mechanics
+**** Mathematical concepts
+***** Ket (vector)
+      - An ordinary vector can be represented sybolically as a =ket=
+        (after Dirac)
+      - Notational equivalence: 
+      $$|a\rangle \equiv \begin{bmatrix}
+      a_1\\
+      a_2\\
+      \vdots\\
+      a_n\\
+      \end{bmatrix}
+      $$
+***** Bra (covector)
+      - An object dual to a vector (a =covector= or =form=) can be
+        represented sybolically as a =bra=
+      - Hermitian conjugate is the conversion operation between bras
+        and kets
+      - Notational equivalence:
+      $$\langle a| \equiv {|a\rangle}^\dagger \equiv \begin{bmatrix}
+      a_1\\
+      a_2\\
+      \vdots\\
+      a_n\\
+      \end{bmatrix}^\dagger \equiv \begin{bmatrix} a_1^* & a_2^* & \cdots & a_n^*\end{bmatrix}
+      $$
+***** Hermitian adjoint (or conjugate)
+      - A combination of matrix transposition and taking complex
+        conjugates of all its elements: $A^\dagger = (A^T)^* =
+        (A^*)^T$
+***** Unitarity
+      - A matrix is unitary when $AA^\dagger = A^\dagger A = I$
+      - Unitary matrices preserve vector lengths and are thus
+        generalizations of rotations $\langle a A|A a\rangle = \langle
+        a|A^\dagger A|a\rangle = \langle a|I|a\rangle = \langle
+        a|a\rangle$
+      - All quantum gates satisfy this property
+      - Unitary matrices have eigenvalues of modulus $1$ (shown [[https://math.stackexchange.com/questions/1717713/show-that-the-eigenvalues-of-a-unitary-matrix-have-modulus-1][here]])
+***** Hermiticity (self-adjointedness)
+      - A Hermitian (self-adjoint) matrix is identical to its
+        Hermitian conjugate
+      - All eigenvalues of a Hermitian matrix are real
+      - Because of the above, physical observables (i.e. measurable
+        properties of a system) are represented as Hermitian operators
+*** Examples of Quantum Circuits
+**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522X%2522,%2522X%2522%5D%5D,%2522init%2522:%5B0,1%5D}][NOT gate]] 
+     Acting on two separate qubits set to $|0\rangle$ and $|1\rangle$
+     respectively.
+**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522H%2522%5D%5D}][Hadamard gate]]
+     Converting a pure state into a superposition
+**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522H%2522%5D,%5B%2522H%2522%5D%5D}][2 Hadamard gates]]
+     ... and back again
+**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522%25E2%2580%25A2%2522,%2522X%2522%5D%5D}][CNOT gate]]
+     Controlled NOT
+**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522H%2522%5D,%5B%2522%25E2%2580%25A2%2522,%2522X%2522%5D%5D}][Bell state]]
+     Simplest instance of quantum entanglement
+**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522Swap%2522,%2522Swap%2522%5D%5D,%2522init%2522:%5B0,1%5D}][SWAP gate]]
+     Exchange two qubits connected by the gate
+**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522Z%2522,%2522Z%2522%5D%5D,%2522init%2522:%5B0,1%5D}][Z gate]]
+     Negates the $|1\rangle$ state
 ** Useful Resources
 *** Quantum Programming Languages
 **** [[https://docs.microsoft.com/en-us/quantum/][Q# and Quantum Development Kit]]
