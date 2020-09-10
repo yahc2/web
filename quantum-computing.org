@@ -55,20 +55,6 @@
      - Attempts to limit decoherence involve cryogenic environments,
        shielding, quantum error correction, etc.
 *** Mathematics of QC
-**** Basic postulates of Quantum Mechanics
-     - Each physical state is associated with a Hilbert space $H$
-       (vector space, where calculus can be applied) with an inner
-       product $\langle a|b\rangle$ (for $a$ and $b$ being vectors in
-       $H$)
-     - The Hilbert space of a composite system is a tensor product of
-       constituent Hilbert spaces
-     - Physical observables are represented by hermitian matrices
-       operating in $H$
-     - The expectation value of an observable $A$ for a system in
-       state $\psi$ is $\langle \psi|A|\psi\rangle$
-     - The spectrum of an operator (its eigenvalues) represents the
-       possible outcomes of physical measurement
-     - State can be alternatively represented by a =density matrix=
 **** Mathematical concepts
 ***** Ket (vector)
       - An ordinary vector can be represented sybolically as a =ket=
@@ -112,6 +98,25 @@
       - All eigenvalues of a Hermitian matrix are real
       - Because of the above, physical observables (i.e. measurable
         properties of a system) are represented as Hermitian operators
+**** Basic postulates of Quantum Mechanics
+     - Each physical state is associated with a Hilbert space $H$
+       (vector space, where calculus can be applied) with an inner
+       product $\langle a|b\rangle$ (for $a$ and $b$ being vectors in
+       $H$)
+     - The Hilbert space of a composite system is a tensor product of
+       constituent Hilbert spaces
+     - Physical observables are represented by hermitian matrices
+       operating in $H$
+     - The expectation value of an observable $A$ for a system in
+       state $\psi$ is $\langle \psi|A|\psi\rangle$
+     - The spectrum of an operator (its eigenvalues) represents the
+       possible outcomes of physical measurement
+     - State can be alternatively represented by a =density matrix=
+**** Dynamics
+     - The dynamics of a quantum system is given by the Schrödinger
+       equation: $i \hbar \frac{\partial}{\partial
+       t}\Psi(\mathbf{r},t) = \hat H \Psi(\mathbf{r},t)$
+
 *** Examples of Quantum Circuits
 **** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522X%2522,%2522X%2522%5D%5D,%2522init%2522:%5B0,1%5D}][NOT gate]] 
      Acting on two separate qubits set to $|0\rangle$ and $|1\rangle$
