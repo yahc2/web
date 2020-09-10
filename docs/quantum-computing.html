@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-10 Thu 16:46 -->
+<!-- 2020-09-10 Thu 17:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -283,6 +283,16 @@ for the JavaScript code in this tag.
 <li><a href="#orgd6bfca8">Mathematics of QC</a></li>
 </ul>
 </li>
+<li><a href="#org0a77bb7">Useful Resources</a>
+<ul>
+<li><a href="#org42adf79">Quantum Programming Languages</a></li>
+<li><a href="#orgd07599c">Circuit Visualization</a></li>
+<li><a href="#orgb5bf774">Blogs</a></li>
+<li><a href="#org1597534">Books &amp; Lecture Notes</a></li>
+<li><a href="#org8fa7bc5">Podcasts</a></li>
+<li><a href="#org571b3c0">Miscellaneous</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -384,11 +394,167 @@ shielding, quantum error correction, etc.</li>
 <h4 id="orgd6bfca8">Mathematics of QC</h4>
 </div>
 </div>
+<div id="outline-container-org0a77bb7" class="outline-3">
+<h3 id="org0a77bb7">Useful Resources</h3>
+<div class="outline-text-3" id="text-org0a77bb7">
+</div>
+<div id="outline-container-org42adf79" class="outline-4">
+<h4 id="org42adf79">Quantum Programming Languages</h4>
+<div class="outline-text-4" id="text-org42adf79">
+</div>
+<ul class="org-ul">
+<li><a id="org04acb85"></a><a href="https://docs.microsoft.com/en-us/quantum/">Q# and Quantum Development Kit</a><br />
+<div class="outline-text-5" id="text-org04acb85">
+<p>
+QPL designed by Microsoft. The QDK contains a quantum simulator
+and many useful debugging tools. Q# programs are embedded within
+C# code, which handles the non-quantum part.
+</p>
+</div>
+</li>
+<li><a id="orge838338"></a><a href="https://qiskit.org/">Qiskit</a><br />
+<div class="outline-text-5" id="text-orge838338">
+<p>
+QPL by IBM. Reasonably mature programming environment, heavy
+integration with Jupyter notebooks, lots of high-quality
+introductory material.
+</p>
+</div>
+</li>
+<li><a id="org6eb7895"></a><a href="https://pyquil-docs.rigetti.com/en/stable/">PyQuil and Forest SDK</a><br />
+<div class="outline-text-5" id="text-org6eb7895">
+<p>
+QPL build by Rigetti Computing. Embeds quantum computations
+within ordinary Python code. Unlike Q# it's more of a library
+than separate language. Facilitates experiments with 
+</p>
+</div>
+</li>
+<li><a id="org61530a7"></a><a href="https://www.mathstat.dal.ca/~selinger/quipper/">Quipper</a><br />
+<div class="outline-text-5" id="text-org61530a7">
+<p>
+A QPL embedded in Haskell. Aspects of quantum computation, such
+as measurement, are represented as monadic types (cf. our
+conversation at Luigi's Lucky Leprechaun)
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgd07599c" class="outline-4">
+<h4 id="orgd07599c">Circuit Visualization</h4>
+<div class="outline-text-4" id="text-orgd07599c">
+</div>
+<ul class="org-ul">
+<li><a id="org6f54dce"></a><a href="https://algassert.com/quirk">Quirk</a><br />
+<div class="outline-text-5" id="text-org6f54dce">
+<p>
+Simple and intuitive quantum circuit visualizer. Good to untangle
+(hehe&#x2026;) conceptual confusion that sometimes arises when working
+on a problem.
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgb5bf774" class="outline-4">
+<h4 id="orgb5bf774">Blogs</h4>
+<div class="outline-text-4" id="text-orgb5bf774">
+</div>
+<ul class="org-ul">
+<li><a id="org3839aae"></a><a href="https://www.scottaaronson.com/blog/">Shtetl-Optimized</a><br />
+<div class="outline-text-5" id="text-org3839aae">
+<p>
+Scientific blog by Scott Aaronson. Lots of explanations,
+discussions and pointers to other resources.
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org1597534" class="outline-4">
+<h4 id="org1597534">Books &amp; Lecture Notes</h4>
+<div class="outline-text-4" id="text-org1597534">
+</div>
+<ul class="org-ul">
+<li><a id="org47e30e3"></a><a href="https://www.cambridge.org/pl/academic/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-computation-and-quantum-information-10th-anniversary-edition?format=HB&amp;isbn=9781107002173">Michael Nielsen, Isaac Chuang - Quantum Computation and Quantum Information</a><br />
+<div class="outline-text-5" id="text-org47e30e3">
+<p>
+In-depth introduction to QC concepts and discussion of physical
+implementations.
+</p>
+</div>
+</li>
+<li><a id="orgcdcf86b"></a><a href="https://www.amazon.com/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565">Scott Aaronson - Quantum Computing Since Democritus</a><br />
+<div class="outline-text-5" id="text-orgcdcf86b">
+<p>
+Slightly humorous and heavily philosophical take on QC and
+complexity theory.
+</p>
+</div>
+</li>
+<li><a id="org420dc60"></a><a href="https://www.springer.com/gp/book/9783030239213">Jack Hidary - Quantum Computing: An Applied Approach</a><br />
+<div class="outline-text-5" id="text-org420dc60">
+<p>
+Slightly more accessible than "Mike &amp; Ike". Not as in-depth.
+</p>
+</div>
+</li>
+<li><a id="org86f1715"></a><a href="http://theory.caltech.edu/~preskill/ph229/">John Preskill - Lecture Notes for Phys 219/CS 219 - Quantum Computation</a><br />
+<div class="outline-text-5" id="text-org86f1715">
+<p>
+Well-written, but technical introduction to the topic.
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org8fa7bc5" class="outline-4">
+<h4 id="org8fa7bc5">Podcasts</h4>
+<div class="outline-text-4" id="text-org8fa7bc5">
+</div>
+<ul class="org-ul">
+<li><a id="org3c05500"></a><a href="https://lexfridman.com/scott-aaronson/">Lex Fridman - Scott Aaronson</a><br /></li>
+<li><a id="orgf4250e7"></a><a href="https://lexfridman.com/leonard-susskind/">Lex Fridman - Leonard Susskind</a><br /></li>
+<li><a id="org0ab2ad1"></a><a href="https://blog.ycombinator.com/john-preskill-on-quantum-computing/">Y Combinator Podcast - John Preskill</a><br /></li>
+<li><a id="orgde8c31f"></a><a href="https://blog.ycombinator.com/scott-aaronson-on-computational-complexity-theory-and-quantum-computers/">Y Combinator Podcast - Scott Aaronson</a><br /></li>
+<li><a id="org670de94"></a><a href="https://blog.ycombinator.com/leonard-susskind-on-richard-feynman-the-holographic-principle-and-unanswered-questions-in-physics/">Y Combinator Podcast - Leonard Susskind</a><br /></li>
+<li><a id="org8ac0e45"></a><a href="https://blog.ycombinator.com/simon-benjamin-on-architectures-for-quantum-computing/">Y Combinator Podcast - Simon Benjamin</a><br />
+<div class="outline-text-5" id="text-org8ac0e45">
+<p>
+Discussion of various types of QC architectures
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org571b3c0" class="outline-4">
+<h4 id="org571b3c0">Miscellaneous</h4>
+<div class="outline-text-4" id="text-org571b3c0">
+</div>
+<ul class="org-ul">
+<li><a id="org4aca6b0"></a><a href="https://quantumkoans.com/">Quantum Koans</a><br />
+<div class="outline-text-5" id="text-org4aca6b0">
+<p>
+Half-tongue-in-cheek, half-serious musings on the nature of QM
+</p>
+</div>
+</li>
+<li><a id="org3007aa0"></a><a href="https://github.com/microsoft/QuantumKatas">Microsoft Quantum Katas</a><br />
+<div class="outline-text-5" id="text-org3007aa0">
+<p>
+A koan-like approach to teaching QC and Q#
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Wojciech Gac</p>
-<p class="date">Created: 2020-09-10 Thu 16:46</p>
+<p class="date">Created: 2020-09-10 Thu 17:42</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

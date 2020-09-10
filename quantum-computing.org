@@ -54,3 +54,54 @@
      - Attempts to limit decoherence involve cryogenic environments,
        shielding, quantum error correction, etc.
 *** Mathematics of QC
+** Useful Resources
+*** Quantum Programming Languages
+**** [[https://docs.microsoft.com/en-us/quantum/][Q# and Quantum Development Kit]]
+     QPL designed by Microsoft. The QDK contains a quantum simulator
+     and many useful debugging tools. Q# programs are embedded within
+     C# code, which handles the non-quantum part.
+**** [[https://qiskit.org/][Qiskit]]
+     QPL by IBM. Reasonably mature programming environment, heavy
+     integration with Jupyter notebooks, lots of high-quality
+     introductory material.
+**** [[https://pyquil-docs.rigetti.com/en/stable/][PyQuil and Forest SDK]]
+     QPL build by Rigetti Computing. Embeds quantum computations
+     within ordinary Python code. Unlike Q# it's more of a library
+     than separate language. Facilitates experiments with 
+**** [[https://www.mathstat.dal.ca/~selinger/quipper/][Quipper]]
+     A QPL embedded in Haskell. Aspects of quantum computation, such
+     as measurement, are represented as monadic types (cf. our
+     conversation at Luigi's Lucky Leprechaun)
+*** Circuit Visualization
+**** [[https://algassert.com/quirk][Quirk]]
+     Simple and intuitive quantum circuit visualizer. Good to untangle
+     (hehe...) conceptual confusion that sometimes arises when working
+     on a problem.
+*** Blogs
+**** [[https://www.scottaaronson.com/blog/][Shtetl-Optimized]]
+     Scientific blog by Scott Aaronson. Lots of explanations,
+     discussions and pointers to other resources.
+*** Books & Lecture Notes
+**** [[https://www.cambridge.org/pl/academic/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-computation-and-quantum-information-10th-anniversary-edition?format=HB&isbn=9781107002173][Michael Nielsen, Isaac Chuang - Quantum Computation and Quantum Information]]
+     In-depth introduction to QC concepts and discussion of physical
+     implementations.
+**** [[https://www.amazon.com/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565][Scott Aaronson - Quantum Computing Since Democritus]]
+     Slightly humorous and heavily philosophical take on QC and
+     complexity theory.
+**** [[https://www.springer.com/gp/book/9783030239213][Jack Hidary - Quantum Computing: An Applied Approach]]
+     Slightly more accessible than "Mike & Ike". Not as in-depth.
+**** [[http://theory.caltech.edu/~preskill/ph229/][John Preskill - Lecture Notes for Phys 219/CS 219 - Quantum Computation]]
+     Well-written, but technical introduction to the topic.
+*** Podcasts
+**** [[https://lexfridman.com/scott-aaronson/][Lex Fridman - Scott Aaronson]]
+**** [[https://lexfridman.com/leonard-susskind/][Lex Fridman - Leonard Susskind]]
+**** [[https://blog.ycombinator.com/john-preskill-on-quantum-computing/][Y Combinator Podcast - John Preskill]]
+**** [[https://blog.ycombinator.com/scott-aaronson-on-computational-complexity-theory-and-quantum-computers/][Y Combinator Podcast - Scott Aaronson]]
+**** [[https://blog.ycombinator.com/leonard-susskind-on-richard-feynman-the-holographic-principle-and-unanswered-questions-in-physics/][Y Combinator Podcast - Leonard Susskind]]
+**** [[https://blog.ycombinator.com/simon-benjamin-on-architectures-for-quantum-computing/][Y Combinator Podcast - Simon Benjamin]]
+     Discussion of various types of QC architectures
+*** Miscellaneous
+**** [[https://quantumkoans.com/][Quantum Koans]]
+     Half-tongue-in-cheek, half-serious musings on the nature of QM
+**** [[https://github.com/microsoft/QuantumKatas][Microsoft Quantum Katas]]
+     A koan-like approach to teaching QC and Q#
