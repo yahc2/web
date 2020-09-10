@@ -56,6 +56,19 @@
        shielding, quantum error correction, etc.
 *** Mathematics of QC
 **** Basic postulates of Quantum Mechanics
+     - Each physical state is associated with a Hilbert space $H$
+       (vector space, where calculus can be applied) with an inner
+       product $\langle a|b\rangle$ (for $a$ and $b$ being vectors in
+       $H$)
+     - The Hilbert space of a composite system is a tensor product of
+       constituent Hilbert spaces
+     - Physical observables are represented by hermitian matrices
+       operating in $H$
+     - The expectation value of an observable $A$ for a system in
+       state $\psi$ is $\langle \psi|A|\psi\rangle$
+     - The spectrum of an operator (its eigenvalues) represents the
+       possible outcomes of physical measurement
+     - State can be alternatively represented by a =density matrix=
 **** Mathematical concepts
 ***** Ket (vector)
       - An ordinary vector can be represented sybolically as a =ket=
