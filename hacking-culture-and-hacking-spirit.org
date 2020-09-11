@@ -55,3 +55,7 @@
      ideas. Taking Vim as the prime example of minimizing overhead,
      the author ponders the importance of getting "zenned out" easily.
 ** Websites
+**** [[https://lainzine.org/][Lainzine]]
+     Zine associated with [[https://lainchan.org/][Lainchan]]. All kinds of articles on
+     programming, security, cryptography, cognition, art, politics,
+     etc.
