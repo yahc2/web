@@ -1,0 +1,52 @@
+#+HTML_HEAD_EXTRA: <style> img { display:block; } </style>
+* Hacking Culture & Hacking Spirit
+  The idea behind this section is to collect various resources -
+  digital or otherwise - expounding the frenetic and restless spirit
+  of hacking pursuits. Ideally, all items here should posess "the
+  quality without a name" so that even if they're not explicitly about
+  hacking, they succeed at evoking a certain frame of mind...
+  [[file:../images/eliza-fulfilled-life.gif]]
+** Books
+**** [[https://www.amazon.com/What-Dormouse-Said-Counterculture-Personal/dp/0143036769][John Markoff - What the Dormouse Said: How the Sixties Counterculture Shaped the Personal Computer Industry]]
+     A very West Coast, countercultural account of the development of
+     computing and its percolation to the people. Gives a lot of
+     background on how many of the pioneers had goals far grander than
+     technical breakthroughs, focusing rather on augmenting the human
+     condition.
+***** [[https://web.archive.org/web/20160305182539/http://www.americanscientist.org/bookshelf/pub/early-computings-long-strange-trip][Jaron Lanier's review of the book]]
+***** [[https://web.archive.org/web/20110721001434/http://www.peaceworkmagazine.org/pwork/0508/050814.htm][Edward Hasbrouck's review of the book]]
+**** [[https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396][Steven Levy - Hackers: Heroes of the Computer Revolution]]
+     The canonical history of the hacker community. Divided into three
+     parts dealing with the MIT hackers (60s mostly), West Coast
+     hardware hackers (70s) and game hackers (80s). Perhaps too
+     exalted at times, but still fun to read.
+** Games
+**** [[http://www.zachtronics.com/eliza/][Eliza]]
+     More a visual novel than game. Centers around Evelyn, who used to
+     work on therapeutic applications of AI for a large company. After
+     a three-year break from her previous life she reemerges and tries
+     to get a grip of her life again. Visually beautiful and
+     meditative.
+**** [[http://www.zachtronics.com/exapunks/][Exapunks]]
+     A hacking game set in the alternative 90s (what with the gray and
+     red WinAmp-y interfaces). Provides an interesting and moody
+     backstory of Moss, a former hacker/cracker battling with a
+     neuro-degenerative disease known as ~the phage~. Gameplay
+     involves programming EXAs - tiny processes visualized as robots -
+     in a simple machine language. 
+**** [[http://www.zachtronics.com/shenzhen-io/][Shenzhen I/O]]
+     An electronics/assembly hacking game. An American expat in
+     Shenzhen, China goes to work for Longteng Ltd. - an electronics
+     company. The challenges consist of both hardware and software
+     design. The programming model is a simple assembly language.
+**** Dunnet
+     Text adventure written by Ron Schnell. Part of every instance of
+     GNU/Emacs since forever. =M-x dunnet=. Interesting plot twist
+     unfolds when...
+**** [[https://hadeanlands.com/][Hadean Lands]]
+     Text adventure from IF legend Andrew Plotkin. An apprentice
+     alchemist needs to survive after his alchemically-powered
+     spaceship crashes on an alien planet. Paracelsus meets "Monday
+     Starts on Saturday", meets Count Cagliostro, meets...
+** Movies
+** Websites

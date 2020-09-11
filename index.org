@@ -4,3 +4,4 @@
 ** Quantum Computing
    [[file:quantum-computing.org][Conceptual Introduction]]
 ** doom-emacs
+** [[file:hacking-culture-and-hacking-spirit.org][Hacking Culture & Hacking Spirit]]
