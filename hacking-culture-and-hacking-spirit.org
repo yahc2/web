@@ -31,7 +31,7 @@
      A hacking game set in the alternative 90s (what with the gray and
      red WinAmp-y interfaces). Provides an interesting and moody
      backstory of Moss, a former hacker/cracker battling with a
-     neuro-degenerative disease known as ~the phage~. Gameplay
+     neuro-degenerative disease known as /the phage/. Gameplay
      involves programming EXAs - tiny processes visualized as robots -
      in a simple machine language. 
 **** [[http://www.zachtronics.com/shenzhen-io/][Shenzhen I/O]]
@@ -49,4 +49,9 @@
      spaceship crashes on an alien planet. Paracelsus meets "Monday
      Starts on Saturday", meets Count Cagliostro, meets...
 ** Movies
+** Articles
+**** [[https://wiki.matthew.nz/view/zenclavier][Zenclavier]]
+     Musings on how interfaces get in the way of actually manipulating
+     ideas. Taking Vim as the prime example of minimizing overhead,
+     the author ponders the importance of getting "zenned out" easily.
 ** Websites
