@@ -5,7 +5,7 @@
   of hacking pursuits. Ideally, all items here should posess "the
   quality without a name" so that even if they're not explicitly about
   hacking, they succeed at evoking a certain frame of mind...
-  [[file:../images/eliza-fulfilled-life.gif]]
+  [[file:images/eliza-fulfilled-life.gif]]
 ** Books
 **** [[https://www.amazon.com/What-Dormouse-Said-Counterculture-Personal/dp/0143036769][John Markoff - What the Dormouse Said: How the Sixties Counterculture Shaped the Personal Computer Industry]]
      A very West Coast, countercultural account of the development of
