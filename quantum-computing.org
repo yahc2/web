@@ -55,6 +55,44 @@
      - Attempts to limit decoherence involve cryogenic environments,
        shielding, quantum error correction, etc.
 *** Mathematics of QC
+**** Preliminaries
+***** Complex Numbers
+      - Complex numbers (commonly denoted as $\mathbb{C}$) are a
+        generalization of real numbers ($\mathbb{R}$) but with the
+        inclusion of the so-called imaginary unit ($i = \sqrt{-1}$).
+      - Historically they stemmed from research into the solvability
+        of quadratic equations (particularly, with negative
+        discriminants). Pioneering the concept were Italian
+        mathematicians Cardano, Bombelli and Tartaglia.
+      - Initially, complex numbers were viewed as a purely
+        mathematical trick, but over the next couple centuries their
+        intimate relationship to geometry and physics was discovered
+        (culminating in the central part they play in quantum
+        mechanics).
+      - The most general form of a complex number is: $z = a + ib$
+        (called a /cartesian form/). $a$ and $b$ are called /real/ and
+        /imaginary/ part, respectively (we can say that $\Re{z} \equiv
+        Re\ z = a$ and $\Im{z} \equiv Im\ z = b$).
+      - An important concept is /complex conjugation/, which boils
+        down to negation of the imaginary part and is frequently
+        denoted as $z^*$ or $\bar{z}$ ($z^* \equiv \bar{z} = a - ib$).
+      - An alternative way to represent a complex number is called
+        /polar form/: $z = (r, \phi)$, where $r =
+        \sqrt{|a|^2 + |b|^2}$ and $\phi = arctan(\frac{b}{a})$.
+      - We have: $zz^* = (a + ib)(a - ib) = a^2 - (ib)^2 = a^2 + b^2
+        = |z|^2$. $|z|$ is called the /modulus/.This relation is
+        *important* and will be lurking all throughout quantum
+        mechanics.
+      - Complex numbers can be visualized on a 2-dimensional /complex
+        plane/ as if they were 2D vectors. In this picture the real
+        and imaginary parts correspond to $x$ and $y$ coordinates,
+        polar components of a complex number correspond to polar
+        coordinates of a vector, modulus is the distance from origin
+        and complex conjugation is reflection about the real axis.
+      - An interactive review of complex arithmetic is available [[https://mybinder.org/v2/gh/Microsoft/QuantumKatas/main?filepath=tutorials/ComplexArithmetic/ComplexArithmetic.ipynb][here]].
+
+***** Linear Algebra
+      - Nice interactive introduction/review available [[https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra][here]]
 **** Mathematical concepts
 ***** Ket (vector)
       - An ordinary vector can be represented sybolically as a =ket=
@@ -156,6 +194,8 @@
      Simple and intuitive quantum circuit visualizer. Good to untangle
      (hehe...) conceptual confusion that sometimes arises when working
      on a problem.
+*** Cheatsheets
+**** [[https://github.com/microsoft/QuantumKatas/blob/main/quickref/qsharp-quick-reference.pdf][Q# and Algebra Quick Reference]]
 *** Blogs
 **** [[https://www.scottaaronson.com/blog/][Shtetl-Optimized]]
      Scientific blog by Scott Aaronson. Lots of explanations,
