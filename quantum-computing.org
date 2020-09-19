@@ -77,10 +77,10 @@
         down to negation of the imaginary part and is frequently
         denoted as $z^*$ or $\bar{z}$ ($z^* \equiv \bar{z} = a - ib$).
       - An alternative way to represent a complex number is called
-        /polar form/: $z = (r, \phi)$, where $r =
-        \sqrt{|a|^2 + |b|^2}$ and $\phi = arctan(\frac{b}{a})$.
+        /polar form/: $z = (r, \varphi)$, where $r =
+        \sqrt{|a|^2 + |b|^2}$ and $\varphi = arctan(\frac{b}{a})$.
       - We have: $zz^* = (a + ib)(a - ib) = a^2 - (ib)^2 = a^2 + b^2
-        = |z|^2$. $|z|$ is called the /modulus/.This relation is
+        = |z|^2$. $|z|$ is called the /modulus/. This relation is
         *important* and will be lurking all throughout quantum
         mechanics.
       - Complex numbers can be visualized on a 2-dimensional /complex
@@ -106,8 +106,8 @@
       \end{bmatrix}
       $$
 ***** Bra (covector)
-      - An object dual to a vector (a =covector= or =form=) can be
-        represented sybolically as a =bra=
+      - An object dual to a vector (a =covector= or =differential
+        form=) can be represented sybolically as a =bra=
       - Hermitian conjugate is the conversion operation between bras
         and kets
       - Notational equivalence:
@@ -211,6 +211,15 @@
      Slightly more accessible than "Mike & Ike". Not as in-depth.
 **** [[http://theory.caltech.edu/~preskill/ph229/][John Preskill - Lecture Notes for Phys 219/CS 219 - Quantum Computation]]
      Well-written, but technical introduction to the topic.
+**** [[http://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf?version=1][Linear Algebra for Quantum Computation]]
+     :PROPERTIES:
+     :ID:       F9C0F759-B9E1-4F4B-AC32-5261E7C2ADAD
+     :END:
+     Excerpt from the book "Quantum Walks and Search Algorithms" by
+     Renato Portugal
+*** Websites
+**** [[https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition][Quantum Computing Primer]]
+     Series of introductory articles on QC by Daniel Vaughan
 *** Podcasts
 **** [[https://lexfridman.com/scott-aaronson/][Lex Fridman - Scott Aaronson]]
 **** [[https://lexfridman.com/leonard-susskind/][Lex Fridman - Leonard Susskind]]
@@ -223,4 +232,7 @@
 **** [[https://quantumkoans.com/][Quantum Koans]]
      Half-tongue-in-cheek, half-serious musings on the nature of QM
 **** [[https://github.com/microsoft/QuantumKatas][Microsoft Quantum Katas]]
-     A koan-like approach to teaching QC and Q#
+     A koan-like approach to teaching QC and Q#. There are two ways to
+     run them:
+     - Natively, using Microsoft's QDK
+     - Embedded in a Jupyter Notebook
