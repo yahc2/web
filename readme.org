@@ -1,1 +1,5 @@
 * https://yahc2.github.io/web
+
+* Publish
+  - =c-c c-e P f= single file.
+  - =c-c c-e P p= for full repo. be careful with the last one.
