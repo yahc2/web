@@ -5,8 +5,8 @@
 
   What happens in some chapters is that the translation is just a
   syntactic one, and it feels like just doing the parsing (which is
-  cool btw) but you can't really implement behaviors that are alreay
-  equal at the semantic level on Racket.
+  cool btw) but you can't really implement behaviors that aren't equal
+  at the semantic level on Racket.
 
   Those DSLs use global variables, so there's an "easy way", in
   racket: =define= in the toplevel. The question is, what if I'd like
