@@ -1,0 +1,28 @@
+* Beautiful Racket
+  First chapters of BR are quite simple but introduce you to several
+  techniques that end up being used in the latest 3 chapters where you
+  implement a BASIC itnerpreter/compiler.
+
+  What happens in some chapters is that the translation is just a
+  syntactic one, and it feels like just doing the parsing (which is
+  cool btw) but you can't really implement behaviors that are alreay
+  equal at the semantic level on Racket.
+
+  Those DSLs use global variables, so there's an "easy way", in
+  racket: =define= in the toplevel. The question is, what if I'd like
+  to implement something that doesn't have a direct mapping[fn:1] to
+  the underneath Racket features?  Nice thing is that Racket has a
+  shiton of features so it probably won't happen for the first 700
+  Programming Languages you're gonna write, but the question still
+  remains. Did I learn how to do everything? (without going into
+  computability academic discussions)
+
+* Footnotes
+
+[fn:1] Recently I skimmed over a couple of articles on convivality(
+http://akkartik.name/akkartik-convivial-20200315.pdf,
+https://www.cs.kent.ac.uk/people/staff/srk21/research/talks/kell19software-slides.pdf)
+. And ended up in this Gregor [[Https://www.youtube.com/watch?v=5l2wMgm7ZOk&list=RDCMUCHDr4RtxwA1KqKGwxgdK4Vg&start_radio=1&t=3478][Kiczales
+presentation. ]][fn:2]
+
+[fn:2] Yay footnotes!

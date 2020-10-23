@@ -3,5 +3,8 @@
    [[./gccemacs.org]]
 ** Quantum Computing
    [[file:quantum-computing.org][Conceptual Introduction]]
-** doom-emacs
+** beautiful racket
+   [[./beautiful-racket.org]].
+** spritely & pals
+
 ** [[file:hacking-culture-and-hacking-spirit.org][Hacking Culture & Hacking Spirit]]
