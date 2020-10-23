@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-10 Thu 15:08 -->
+<!-- 2020-10-23 Fri 13:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Wojciech Gac" />
+<meta name="author" content="Raimon Grau" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -201,50 +201,26 @@
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 </head>
 <body>
@@ -253,62 +229,86 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc388968">lap</a></li>
-<li><a href="#org99e1bb9">limplify</a></li>
-<li><a href="#org401fde0">loop</a></li>
-<li><a href="#org2bd333f">pure?</a></li>
-<li><a href="#org41a812b">bb</a></li>
-<li><a href="#org45e1a2a">refs</a></li>
+<li><a href="#org7002740">Testbed</a></li>
+<li><a href="#org5968635">lap</a></li>
+<li><a href="#orgbbe7dbc">limplify</a></li>
+<li><a href="#orgc497b06">loop</a></li>
+<li><a href="#orgfe47e4b">pure?</a></li>
+<li><a href="#orgbfbbecf">bb</a></li>
+<li><a href="#orge12cf52">refs</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc388968" class="outline-2">
-<h2 id="orgc388968">lap</h2>
-<div class="outline-text-2" id="text-orgc388968">
+<div id="outline-container-org7002740" class="outline-2">
+<h2 id="org7002740">Testbed</h2>
+<div class="outline-text-2" id="text-org7002740">
+<p>
+To try gccemacs using docker, you can use something like the
+following command. The <a href="./comp-test.el">./comp-test.el</a> is just a small example of how
+to native-compile a single function while maximizing the logging.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">docker run -ti --network host -e <span style="color: #cae682;">DISPLAY</span>=$<span style="color: #cae682;">DISPLAY</span> <span style="color: #95e454;">\</span>
+-v/tmp/.X11-unix:/tmp/.X11-unix -v $<span style="color: #cae682;">PWD</span>:/tmp/web <span style="color: #95e454;">\</span>
+andreacorallo/emacs-nativecomp emacs /tmp/web/comp-test.el
+</pre>
+</div>
+
+<p>
+<a href="./comp-test.el">./comp-test.el</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5968635" class="outline-2">
+<h2 id="org5968635">lap</h2>
+<div class="outline-text-2" id="text-org5968635">
 <p>
 output of comp-lap
 </p>
 <div class="org-src-container">
 <pre class="src src-elisp">
 #s(comp-func-l
-   :name foo
-   :c-name "F666f6f_foo_0"
-   :byte-func #f(compiled-function () #&lt;bytecode 0x1f4000170cb5&gt;)
-   :doc nil
-   :int-spec nil
-   :lap ((byte-constant 123 . 0) (byte-return . 0))
-   :ssa-status nil
-   :frame-size 1
-   :blocks #&lt;hash-table eql 0/65 0x1e09afb&gt;
-   :lap-block #&lt;hash-table equal 0/65 0x998945&gt;
-   :edges nil
-   :block-cnt-gen (closure ((n . -1) . #1=(cl-struct-comp-edge-tags
-					   cl-struct-comp-latch-tags
-					   cl-struct-comp-block-lap-tags
-					   cl-struct-comp-block-tags
-					   cl-struct-comp-nargs-tags
-					   cl-struct-comp-args-tags
-					   cl-struct-comp-args-base-tags
-					   cl-struct-comp-ctxt-tags
-					   cl-struct-comp-data-container-tags
-					   t)
-			    ) . #2=(nil (setq n (1+ n))))
-   :edge-cnt-gen (closure ((n . -1) . #1#) . #2#)
-   :has-non-local nil
-   :array-h #&lt;hash-table eql 1/65 0x9b7783&gt;
-   :speed 2
-   :pure nil
-   :args #s(comp-args
-	    :min 0
-	    :max 0))
+   <span style="color: #e5786d;">:name</span> foo
+   <span style="color: #e5786d;">:c-name</span> <span style="color: #95e454;">"F666f6f_foo_0"</span>
+   <span style="color: #e5786d;">:byte-func</span> #f(compiled-function () #&lt;bytecode 0x1f4000170cb5&gt;)
+   <span style="color: #e5786d;">:doc</span> nil
+   <span style="color: #e5786d;">:int-spec</span> nil
+   <span style="color: #e5786d;">:lap</span> ((byte-constant 123 . 0) (byte-return . 0))
+   <span style="color: #e5786d;">:ssa-status</span> nil
+   <span style="color: #e5786d;">:frame-size</span> 1
+   <span style="color: #e5786d;">:blocks</span> #&lt;hash-table eql 0/65 0x1e09afb&gt;
+   <span style="color: #e5786d;">:lap-block</span> #&lt;hash-table equal 0/65 0x998945&gt;
+   <span style="color: #e5786d;">:edges</span> nil
+   <span style="color: #e5786d;">:block-cnt-gen</span> (closure ((n . -1) . #1=(cl-struct-comp-edge-tags
+                                           cl-struct-comp-latch-tags
+                                           cl-struct-comp-block-lap-tags
+                                           cl-struct-comp-block-tags
+                                           cl-struct-comp-nargs-tags
+                                           cl-struct-comp-args-tags
+                                           cl-struct-comp-args-base-tags
+                                           cl-struct-comp-ctxt-tags
+                                           cl-struct-comp-data-container-tags
+                                           t)
+                            ) . #2=(nil (<span style="color: #8ac6f2; font-weight: bold;">setq</span> n (1+ n))))
+   <span style="color: #e5786d;">:edge-cnt-gen</span> (closure ((n . -1) . #1#) . #2#)
+   <span style="color: #e5786d;">:has-non-local</span> nil
+   <span style="color: #e5786d;">:array-h</span> #&lt;hash-table eql 1/65 0x9b7783&gt;
+   <span style="color: #e5786d;">:speed</span> 2
+   <span style="color: #e5786d;">:pure</span> nil
+   <span style="color: #e5786d;">:args</span> #s(comp-args
+            <span style="color: #e5786d;">:min</span> 0
+            <span style="color: #e5786d;">:max</span> 0))
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org99e1bb9" class="outline-2">
-<h2 id="org99e1bb9">limplify</h2>
-<div class="outline-text-2" id="text-org99e1bb9">
+<div id="outline-container-orgbbe7dbc" class="outline-2">
+<h2 id="orgbbe7dbc">limplify</h2>
+<div class="outline-text-2" id="text-orgbbe7dbc">
 <p>
 (defun foo (x y) (+ x y))
 comp-ctxt
@@ -322,25 +322,25 @@ comp-ctxt
  data
  (entry
  #s(comp-block-lap entry
- ((comment "Lisp function: foo")
+ ((comment <span style="color: #95e454;">"Lisp function: foo"</span>)
  (set-par-to-local #s(comp-mvar 28180332 0 nil nil nil) 0)
  (set-par-to-local #s(comp-mvar 29898452 1 nil nil nil) 1)
  (jump bb_0))
  nil
  nil
  (#s(comp-edge #2 #s(comp-block-lap bb_0
- ((comment "LAP op byte-stack-ref")
+ ((comment <span style="color: #95e454;">"LAP op byte-stack-ref"</span>)
  (set #s(comp-mvar 27590732 2 nil nil nil)
       #s(comp-mvar 28180332 0 nil nil nil))
- (comment "LAP op byte-stack-ref")
+ (comment <span style="color: #95e454;">"LAP op byte-stack-ref"</span>)
  (set #s(comp-mvar 13418998 3 nil nil nil)
       #s(comp-mvar 29898452 1 nil nil nil))
- (comment "LAP op byte-plus")
+ (comment <span style="color: #95e454;">"LAP op byte-plus"</span>)
  (set #s(comp-mvar 28878218 2 nil nil number)
-	(callref + #s(comp-mvar 27590732 2 nil nil nil)
-		   #s(comp-mvar 13418998 3 nil nil nil)))
- (comment "LAP op byte-return")
- (return #s(comp-mvar 28878218 2 nil nil number)))
+        (callref + #s(comp-mvar 27590732 2 nil nil nil)
+                   #s(comp-mvar 13418998 3 nil nil nil)))
+ (comment <span style="color: #95e454;">"LAP op byte-return"</span>)
+ (<span style="color: #8ac6f2; font-weight: bold;">return</span> #s(comp-mvar 28878218 2 nil nil number)))
  nil
  (#4)
  nil
@@ -356,12 +356,12 @@ comp-ctxt
  nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 27954822 2 nil nil nil) #s(comp-mvar 27954836 3 nil nil nil)]
  -1 nil)
  bb_0
- #s(comp-block-lap bb_0 ((comment "LAP op byte-stack-ref") (set #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 28180332 0 nil nil nil)) (comment "LAP op byte-stack-ref") (set #s(comp-mvar 13418998 3 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil)) (comment "LAP op byte-plus") (set #s(comp-mvar 28878218 2 nil nil number) (callref + #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 13418998 3 nil nil nil))) (comment "LAP op byte-return") (return #s(comp-mvar 28878218 2 nil nil number))) nil (#s(comp-edge #s(comp-block-lap entry ((comment "Lisp function: foo") (set-par-to-local #s(comp-mvar 28180332 0 nil nil nil) 0) (set-par-to-local #s(comp-mvar 29898452 1 nil nil nil) 1) (jump bb_0)) nil nil (#4) nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 27954822 2 nil nil nil) #s(comp-mvar 27954836 3 nil nil nil)] -1 nil) #2 0)) nil nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 28878218 2 nil nil number) #s(comp-mvar 13418998 3 nil nil nil)] 1 0)))
+ #s(comp-block-lap bb_0 ((comment <span style="color: #95e454;">"LAP op byte-stack-ref"</span>) (set #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 28180332 0 nil nil nil)) (comment <span style="color: #95e454;">"LAP op byte-stack-ref"</span>) (set #s(comp-mvar 13418998 3 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil)) (comment <span style="color: #95e454;">"LAP op byte-plus"</span>) (set #s(comp-mvar 28878218 2 nil nil number) (callref + #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 13418998 3 nil nil nil))) (comment <span style="color: #95e454;">"LAP op byte-return"</span>) (<span style="color: #8ac6f2; font-weight: bold;">return</span> #s(comp-mvar 28878218 2 nil nil number))) nil (#s(comp-edge #s(comp-block-lap entry ((comment <span style="color: #95e454;">"Lisp function: foo"</span>) (set-par-to-local #s(comp-mvar 28180332 0 nil nil nil) 0) (set-par-to-local #s(comp-mvar 29898452 1 nil nil nil) 1) (jump bb_0)) nil nil (#4) nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 27954822 2 nil nil nil) #s(comp-mvar 27954836 3 nil nil nil)] -1 nil) #2 0)) nil nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 28878218 2 nil nil number) #s(comp-mvar 13418998 3 nil nil nil)] 1 0)))
 
  #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ())
- (#s(comp-edge #s(comp-block-lap entry ((comment "Lisp function: foo") (set-par-to-local #s(comp-mvar 28180332 0 nil nil nil) 0) (set-par-to-local #s(comp-mvar 29898452 1 nil nil nil) 1) (jump bb_0)) nil nil (#2) nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 27954822 2 nil nil nil) #s(comp-mvar 27954836 3 nil nil nil)] -1 nil) #s(comp-block-lap bb_0 ((comment "LAP op byte-stack-ref") (set #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 28180332 0 nil nil nil)) (comment "LAP op byte-stack-ref") (set #s(comp-mvar 13418998 3 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil)) (comment "LAP op byte-plus") (set #s(comp-mvar 28878218 2 nil nil number) (callref + #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 13418998 3 nil nil nil))) (comment "LAP op byte-return") (return #s(comp-mvar 28878218 2 nil nil number))) nil (#2) nil nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 28878218 2 nil nil number) #s(comp-mvar 13418998 3 nil nil nil)] 1 0) 0))
- #[0 "À¢T " [(0)] 2]
- #[0 "À¢T " [(0)] 2]
+ (#s(comp-edge #s(comp-block-lap entry ((comment <span style="color: #95e454;">"Lisp function: foo"</span>) (set-par-to-local #s(comp-mvar 28180332 0 nil nil nil) 0) (set-par-to-local #s(comp-mvar 29898452 1 nil nil nil) 1) (jump bb_0)) nil nil (#2) nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 27954822 2 nil nil nil) #s(comp-mvar 27954836 3 nil nil nil)] -1 nil) #s(comp-block-lap bb_0 ((comment <span style="color: #95e454;">"LAP op byte-stack-ref"</span>) (set #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 28180332 0 nil nil nil)) (comment <span style="color: #95e454;">"LAP op byte-stack-ref"</span>) (set #s(comp-mvar 13418998 3 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil)) (comment <span style="color: #95e454;">"LAP op byte-plus"</span>) (set #s(comp-mvar 28878218 2 nil nil number) (callref + #s(comp-mvar 27590732 2 nil nil nil) #s(comp-mvar 13418998 3 nil nil nil))) (comment <span style="color: #95e454;">"LAP op byte-return"</span>) (<span style="color: #8ac6f2; font-weight: bold;">return</span> #s(comp-mvar 28878218 2 nil nil number))) nil (#2) nil nil #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data ()) nil [#s(comp-mvar 28180332 0 nil nil nil) #s(comp-mvar 29898452 1 nil nil nil) #s(comp-mvar 28878218 2 nil nil number) #s(comp-mvar 13418998 3 nil nil nil)] 1 0) 0))
+ #[0 <span style="color: #95e454;">"&#192;&#137;&#162;T&#160;&#135;"</span> [(0)] 2]
+ #[0 <span style="color: #95e454;">"&#192;&#137;&#162;T&#160;&#135;"</span> [(0)] 2]
  nil
  #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8125 data (0 4))
  2
@@ -373,9 +373,9 @@ comp-ctxt
 </div>
 </div>
 
-<div id="outline-container-org401fde0" class="outline-2">
-<h2 id="org401fde0">loop</h2>
-<div class="outline-text-2" id="text-org401fde0">
+<div id="outline-container-orgc497b06" class="outline-2">
+<h2 id="orgc497b06">loop</h2>
+<div class="outline-text-2" id="text-orgc497b06">
 <p>
 (let ((i 0))
 (loop i 1 to 1000000000
@@ -385,9 +385,9 @@ comp-ctxt
 </div>
 </div>
 
-<div id="outline-container-org2bd333f" class="outline-2">
-<h2 id="org2bd333f">pure?</h2>
-<div class="outline-text-2" id="text-org2bd333f">
+<div id="outline-container-orgfe47e4b" class="outline-2">
+<h2 id="orgfe47e4b">pure?</h2>
+<div class="outline-text-2" id="text-orgfe47e4b">
 <p>
 (defun a ()
    (b))
@@ -400,10 +400,8 @@ comp-ctxt
 
 <p>
 (defun c ()
+   1)
 </p>
-<ol class="org-ol">
-<li></li>
-</ol>
 
 <p>
 (setq foo (myfunc 1))
@@ -412,15 +410,15 @@ comp-ctxt
 </div>
 </div>
 
-<div id="outline-container-org41a812b" class="outline-2">
-<h2 id="org41a812b">bb</h2>
-<div class="outline-text-2" id="text-org41a812b">
+<div id="outline-container-orgbfbbecf" class="outline-2">
+<h2 id="orgbfbbecf">bb</h2>
+<div class="outline-text-2" id="text-orgbfbbecf">
 <div class="org-src-container">
-<pre class="src src-elisp">  (defun my-fun (p1)
-    (let ((a 1))
-      (if p1
-	  (setf a 2)
-	(setf a 4))
+<pre class="src src-elisp">  (<span style="color: #8ac6f2; font-weight: bold;">defun</span> <span style="color: #cae682;">my-fun</span> (p1)
+    (<span style="color: #8ac6f2; font-weight: bold;">let</span> ((a 1))
+      (<span style="color: #8ac6f2; font-weight: bold;">if</span> p1
+          (<span style="color: #8ac6f2; font-weight: bold;">setf</span> a 2)
+        (<span style="color: #8ac6f2; font-weight: bold;">setf</span> a 4))
       (print a)))
 
 (my-fun nil)
@@ -438,20 +436,21 @@ comp-ctxt
 </div>
 </div>
 
-<div id="outline-container-org45e1a2a" class="outline-2">
-<h2 id="org45e1a2a">refs</h2>
-<div class="outline-text-2" id="text-org45e1a2a">
+<div id="outline-container-orge12cf52" class="outline-2">
+<h2 id="orge12cf52">refs</h2>
+<div class="outline-text-2" id="text-orge12cf52">
 <ul class="org-ul">
 <li><a href="https://en.wikipedia.org/wiki/Static_single_assignment_form#Converting_to_SSA">https://en.wikipedia.org/wiki/Static_single_assignment_form#Converting_to_SSA</a></li>
 <li><a href="https://www.cs.rice.edu/~keith/EMBED/dom.pdf">https://www.cs.rice.edu/~keith/EMBED/dom.pdf</a></li>
+<li><a href="https://linuxplumbersconf.org/event/7/contributions/741/">https://linuxplumbersconf.org/event/7/contributions/741/</a></li>
 </ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Wojciech Gac</p>
-<p class="date">Created: 2020-09-10 Thu 15:08</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="author">Author: Raimon Grau</p>
+<p class="date">Created: 2020-10-23 Fri 13:10</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

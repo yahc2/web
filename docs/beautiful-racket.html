@@ -229,55 +229,57 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org65d48fc">Topics</a>
-<ul>
-<li><a href="#org7e77a69">gccemacs</a></li>
-<li><a href="#org1b6ad6e">Quantum Computing</a></li>
-<li><a href="#orgcdeef8d">beautiful racket</a></li>
-<li><a href="#org95f66dd">spritely &amp; pals</a></li>
-<li><a href="#org24a8711">Hacking Culture &amp; Hacking Spirit</a></li>
-</ul>
-</li>
+<li><a href="#org21d2153">Beautiful Racket</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org65d48fc" class="outline-2">
-<h2 id="org65d48fc">Topics</h2>
-<div class="outline-text-2" id="text-org65d48fc">
-</div>
-<div id="outline-container-org7e77a69" class="outline-3">
-<h3 id="org7e77a69">gccemacs</h3>
-<div class="outline-text-3" id="text-org7e77a69">
+<div id="outline-container-org21d2153" class="outline-2">
+<h2 id="org21d2153">Beautiful Racket</h2>
+<div class="outline-text-2" id="text-org21d2153">
 <p>
-<a href="./gccemacs.html">./gccemacs.html</a>
+First chapters of BR are quite simple but introduce you to several
+techniques that end up being used in the latest 3 chapters where you
+implement a BASIC itnerpreter/compiler.
 </p>
-</div>
-</div>
-<div id="outline-container-org1b6ad6e" class="outline-3">
-<h3 id="org1b6ad6e">Quantum Computing</h3>
-<div class="outline-text-3" id="text-org1b6ad6e">
-<p>
-<a href="quantum-computing.html">Conceptual Introduction</a>
-</p>
-</div>
-</div>
-<div id="outline-container-orgcdeef8d" class="outline-3">
-<h3 id="orgcdeef8d">beautiful racket</h3>
-<div class="outline-text-3" id="text-orgcdeef8d">
-<p>
-<a href="./beautiful-racket.html">./beautiful-racket.html</a>.
-</p>
-</div>
-</div>
-<div id="outline-container-org95f66dd" class="outline-3">
-<h3 id="org95f66dd">spritely &amp; pals</h3>
-</div>
 
-<div id="outline-container-org24a8711" class="outline-3">
-<h3 id="org24a8711"><a href="hacking-culture-and-hacking-spirit.html">Hacking Culture &amp; Hacking Spirit</a></h3>
+<p>
+What happens in some chapters is that the translation is just a
+syntactic one, and it feels like just doing the parsing (which is
+cool btw) but you can't really implement behaviors that are alreay
+equal at the semantic level on Racket.
+</p>
+
+<p>
+Those DSLs use global variables, so there's an "easy way", in
+racket: <code>define</code> in the toplevel. The question is, what if I'd like
+to implement something that doesn't have a direct mapping<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> to
+the underneath Racket features?  Nice thing is that Racket has a
+shiton of features so it probably won't happen for the first 700
+Programming Languages you're gonna write, but the question still
+remains. Did I learn how to do everything? (without going into
+computability academic discussions)
+</p>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Recently I skimmed over a couple of articles on convivality(
+<a href="http://akkartik.name/akkartik-convivial-20200315.pdf">http://akkartik.name/akkartik-convivial-20200315.pdf</a>,
+<a href="https://www.cs.kent.ac.uk/people/staff/srk21/research/talks/kell19software-slides.pdf">https://www.cs.kent.ac.uk/people/staff/srk21/research/talks/kell19software-slides.pdf</a>)
+. And ended up in this Gregor <a href="//www.youtube.com/watch?v=5l2wMgm7ZOk&amp;list=RDCMUCHDr4RtxwA1KqKGwxgdK4Vg&amp;start_radio=1&amp;t=3478">Kiczales
+presentation. </a><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Yay footnotes!
+</p></div></div>
+
+
 </div>
+</div></div>
 <div id="postamble" class="status">
 <p class="author">Author: Raimon Grau</p>
 <p class="date">Created: 2020-10-23 Fri 13:10</p>
