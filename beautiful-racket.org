@@ -1,4 +1,4 @@
-* Beautiful Racket
+#+TITLE: Beautiful Racket
   First chapters of BR are quite simple but introduce you to several
   techniques that end up being used in the latest 3 chapters where you
   implement a BASIC itnerpreter/compiler.
