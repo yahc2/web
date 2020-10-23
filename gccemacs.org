@@ -1,3 +1,19 @@
+
+* Testbed
+
+  To try gccemacs using docker, you can use something like the
+  following command. The [[./comp-test.el]] is just a small example of how
+  to native-compile a single function while maximizing the logging.
+
+  #+begin_src bash
+    docker run -ti --network host -e DISPLAY=$DISPLAY \
+    -v/tmp/.X11-unix:/tmp/.X11-unix -v $PWD:/tmp/web \
+    andreacorallo/emacs-nativecomp emacs /tmp/web/comp-test.el
+  #+end_src
+
+  [[./comp-test.el][./comp-test.el]]
+
+
 * lap
   output of comp-lap
 #+begin_src elisp
@@ -139,3 +155,4 @@
 * refs
   - https://en.wikipedia.org/wiki/Static_single_assignment_form#Converting_to_SSA
   - https://www.cs.rice.edu/~keith/EMBED/dom.pdf
+  - https://linuxplumbersconf.org/event/7/contributions/741/
