@@ -156,3 +156,4 @@
   - https://en.wikipedia.org/wiki/Static_single_assignment_form#Converting_to_SSA
   - https://www.cs.rice.edu/~keith/EMBED/dom.pdf
   - https://linuxplumbersconf.org/event/7/contributions/741/
+  - https://blog.yossarian.net/2020/10/23/Understanding-static-single-assignment-forms
