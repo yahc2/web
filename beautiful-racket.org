@@ -17,6 +17,11 @@
   remains. Did I learn how to do everything? (without going into
   computability academic discussions)
 
+* refs
+  - https://news.ycombinator.com/item?id=16454854 is a HN thread with
+    interesting comments on that respect. Some rise the same concerns
+    about semantic similarities between the DSL and runtime.
+
 * Footnotes
 
 [fn:1] Recently I skimmed over a couple of articles on convivality(
