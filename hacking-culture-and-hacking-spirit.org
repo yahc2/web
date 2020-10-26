@@ -48,7 +48,20 @@
      alchemist needs to survive after his alchemically-powered
      spaceship crashes on an alien planet. Paracelsus meets "Monday
      Starts on Saturday", meets Count Cagliostro, meets...
-** Movies
+**** [[https://www.funghisoft.com/mhrd][MHRD]]
+     Digital circuit design simulator. You're employed by a fictional
+     company by the name of... Microhard. Your objective is to build
+     steadily more complicated logical components using a very simple
+     and intuitive hardware description language. Your efforts
+     culminate in a design for a complete (albeit simple) CPU.
+** Videos
+*** Interviews
+**** [[https://www.youtube.com/watch?v=fhOHn9TClXY][Joe Armstrong Interviews Alan Kay]]
+     A fascinating interview that Rai recommended to me a while
+     ago. Joe behaves like a moderate case of ADHD, interrupting Alan
+     more than necessary, but still... This interview mentions two
+     metric shitloads of fascinating papers and projects that have
+     mostly been forgotten.
 ** Articles
 **** [[https://wiki.matthew.nz/view/zenclavier][Zenclavier]]
      Musings on how interfaces get in the way of actually manipulating
@@ -59,3 +72,51 @@
      Zine associated with [[https://lainchan.org/][Lainchan]]. All kinds of articles on
      programming, security, cryptography, cognition, art, politics,
      etc.
+** Operating Systems
+*** Unix
+    Unix, the archetypal hacker's choice. Love it or hate it. The
+    UNiplexed Information and Computing Service is here to stay.
+**** [[http://www.catb.org/~esr/writings/taoup/html/][The Art Of Unix Programming]]
+     A book-sized overview of the Unix philosophy by Eric
+     S. Raymond. This book will probably not teach you systems
+     programming under Unix. Rather, it will serve as a systematic
+     exposition of the decades-long accumulation of practices, design
+     principles and historical accidents.
+***** [[http://www.catb.org/~esr/writings/taoup/html/ch02s01.html][Origins and History of Unix, 1969-1995]]
+      Fairly detailed history of how Unix came to be. Entertaining and
+      informative. Good companion to Peter Salus' book.
+***** [[http://www.catb.org/~esr/writings/taoup/html/hackers.html][Origins and History of the Hackers, 1961-1995]]
+      History and folklore of the hacker community and how at some
+      point it merged with the Unix folks.
+**** [[https://web.archive.org/web/20200731175107/http://www.groklaw.net/staticpages/index.php?page=20051013231901859][The Daemon, the GNU & the Penguin]]
+     An in-depth history of Unix, GNU and Linux. Lots of tidbits,
+     anecdotes and pointers to other resources.
+**** [[https://www.cs.dartmouth.edu/~doug/dmr.pdf][Doug McIlroy's appreciation of Dennis Ritchie]]
+**** [[https://www.bell-labs.com/usr/dmr/www/cacm.pdf][Ken & Dennis' Unix paper from CACM '74]]
+**** [[https://www.bell-labs.com/usr/dmr/www/][Dennis Ritchie's homepage - a treasure trove]]
+**** [[http://www.ruddcanaday.com/adventures/][Rudd Canaday - My Adventures in Software]]
+     A memoir of Rudd Canaday - one of the lesser known early
+     contributors to Unix development. Canaday is claimed to be
+     greatly underappreciated in the history of Unix.
+*** Incompatible Timesharing System
+    The sound of a tree falling when there's nobody there to hear
+    it. An ancient operating system designed and put together by the
+    MIT hackers. Originated on the PDP-6, later transplanted to
+    PDP-10. Birthplace of MacLisp, Scheme, Planner, Conniver, Emacs
+    and many more. Featured extensively in [[*[[https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396\][Steven Levy - Hackers: Heroes of the Computer Revolution]\]][Levy's book]]. Today it is
+    but a memory. Or is it?
+**** [[https://its.victor.se/wiki/][ITS Wiki]]
+     Björn Victor's wiki about the system. Contains both historical
+     documents and more contemporary howtos aimed at emulated
+     instances. Closely related to the [[http://up.update.uu.se/][UPDATE]] system running in
+     Uppsala.
+**** [[https://hack.org/mc/blog/its.html][MC's journal entry on ITS]]
+     Another Swede, another ITS aficionado. But seriously, MC (Michael
+     Cardell Wiederkrantz) is very passionate about retrocomputing and
+     this entry is far from being the only one.
+**** [[https://its.svensson.org/][Paul Svensson's ITS Page]]
+     What is it with Swedish ancestry and ITS? Unfortunately, this
+     page is currently unavailable.
+**** [[https://github.com/PDP-10][PDP-10 organization on GitHub]]
+     One place to rule them all. Largely focused on ITS, but an
+     occasional mention of TOPS-20 is not punished by death.

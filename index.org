@@ -1,10 +1,6 @@
 * Topics
-** gccemacs
-   [[./gccemacs.org]]
-** Quantum Computing
-   [[file:quantum-computing.org][Conceptual Introduction]]
-** beautiful racket
-   [[./beautiful-racket.org]].
+** [[./gccemacs.org][gccemacs]]
+** [[file:quantum-computing.org][Quantum Computing]]
+** [[./beautiful-racket.org][Beautiful Racket]]
 ** spritely & pals
-
 ** [[file:hacking-culture-and-hacking-spirit.org][Hacking Culture & Hacking Spirit]]
