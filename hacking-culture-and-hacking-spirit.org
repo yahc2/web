@@ -120,3 +120,11 @@
 **** [[https://github.com/PDP-10][PDP-10 organization on GitHub]]
      One place to rule them all. Largely focused on ITS, but an
      occasional mention of TOPS-20 is not punished by death.
+** Retrocomputing
+*** Emulation
+**** [[https://jamesfriend.com.au/pce-js/][Mac OS System 7]]
+     An in-browser Mac emulator. Version 7.0.1
+**** [[https://lively-web.org/users/bert/Smalltalk-78.html][Smalltalk-78 in Lively]]
+     Smalltalk-78 implementation in Lively, running on WebAssembly (?).
+**** [[https://archive.org/details/canoncat][In-browser emulator of Canon Cat]]
+     Jef Raskin's original personal computer, now in your browser.
