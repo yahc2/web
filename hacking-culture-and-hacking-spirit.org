@@ -33,7 +33,7 @@
      backstory of Moss, a former hacker/cracker battling with a
      neuro-degenerative disease known as /the phage/. Gameplay
      involves programming EXAs - tiny processes visualized as robots -
-     in a simple machine language. 
+     in a simple machine language.
 **** [[http://www.zachtronics.com/shenzhen-io/][Shenzhen I/O]]
      An electronics/assembly hacking game. An American expat in
      Shenzhen, China goes to work for Longteng Ltd. - an electronics
@@ -58,10 +58,9 @@
 *** Interviews
 **** [[https://www.youtube.com/watch?v=fhOHn9TClXY][Joe Armstrong Interviews Alan Kay]]
      A fascinating interview that Rai recommended to me a while
-     ago. Joe behaves like a moderate case of ADHD, interrupting Alan
-     more than necessary, but still... This interview mentions two
-     metric shitloads of fascinating papers and projects that have
-     mostly been forgotten.
+     ago. Joe interrupts Alan more than necessary, but still... This
+     interview mentions two metric shitloads of fascinating papers and
+     projects that have mostly been forgotten.
 ** Articles
 **** [[https://wiki.matthew.nz/view/zenclavier][Zenclavier]]
      Musings on how interfaces get in the way of actually manipulating
