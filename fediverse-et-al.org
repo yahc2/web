@@ -1,0 +1,10 @@
+#+TITLE: Fediverse
+
+* spritely
+  - [[https://docs.racket-lang.org/goblins][Goblins]]
+  - [[http://www.erights.org/][E lang]]
+
+
+* Fediverse, activitypub. others
+  - https://www.w3.org/TR/activitypub/
+  - https://forgefed.peers.community

@@ -2,5 +2,5 @@
 ** [[./gccemacs.org][gccemacs]]
 ** [[file:quantum-computing.org][Quantum Computing]]
 ** [[./beautiful-racket.org][Beautiful Racket]]
-** spritely & pals
+** [[./fediverse-et-al.org][Fediverse, Spritely, and Pals]]
 ** [[file:hacking-culture-and-hacking-spirit.org][Hacking Culture & Hacking Spirit]]
