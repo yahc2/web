@@ -30,7 +30,7 @@
 [fn:1] Recently I skimmed over a couple of articles on convivality(
 http://akkartik.name/akkartik-convivial-20200315.pdf,
 https://www.cs.kent.ac.uk/people/staff/srk21/research/talks/kell19software-slides.pdf)
-. And ended up in this Gregor [[Https://www.youtube.com/watch?v=5l2wMgm7ZOk&list=RDCMUCHDr4RtxwA1KqKGwxgdK4Vg&start_radio=1&t=3478][Kiczales
-presentation. ]][fn:2]
+. And ended up in this Gregor [[https://www.youtube.com/watch?v=5l2wMgm7ZOk&list=RDCMUCHDr4RtxwA1KqKGwxgdK4Vg&start_radio=1&t=3478][Kiczales
+presentation.]][fn:2]
 
 [fn:2] Yay footnotes!
