@@ -97,7 +97,7 @@
 ***** Ket (vector)
       - An ordinary vector can be represented sybolically as a =ket=
         (after Dirac)
-      - Notational equivalence: 
+      - Notational equivalence:
       $$|a\rangle \equiv \begin{bmatrix}
       a_1\\
       a_2\\
@@ -156,7 +156,7 @@
        t}\Psi(\mathbf{r},t) = \hat H \Psi(\mathbf{r},t)$
 
 *** Examples of Quantum Circuits
-**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522X%2522,%2522X%2522%5D%5D,%2522init%2522:%5B0,1%5D}][NOT gate]] 
+**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522X%2522,%2522X%2522%5D%5D,%2522init%2522:%5B0,1%5D}][NOT gate]]
      Acting on two separate qubits set to $|0\rangle$ and $|1\rangle$
      respectively.
 **** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522H%2522%5D%5D}][Hadamard gate]]
@@ -184,7 +184,7 @@
 **** [[https://pyquil-docs.rigetti.com/en/stable/][PyQuil and Forest SDK]]
      QPL build by Rigetti Computing. Embeds quantum computations
      within ordinary Python code. Unlike Q# it's more of a library
-     than separate language. Facilitates experiments with 
+     than separate language. Facilitates experiments with
 **** [[https://www.mathstat.dal.ca/~selinger/quipper/][Quipper]]
      A QPL embedded in Haskell. Aspects of quantum computation, such
      as measurement, are represented as monadic types (cf. our
@@ -228,6 +228,9 @@
 **** [[https://blog.ycombinator.com/leonard-susskind-on-richard-feynman-the-holographic-principle-and-unanswered-questions-in-physics/][Y Combinator Podcast - Leonard Susskind]]
 **** [[https://blog.ycombinator.com/simon-benjamin-on-architectures-for-quantum-computing/][Y Combinator Podcast - Simon Benjamin]]
      Discussion of various types of QC architectures
+**** [[https://home.cern/news/announcement/computing/online-introductory-lectures-quantum-computing-6-november][CERN online introductory lectures]]
+     The course starts the 6th of November, every Friday till Dec
+     18th.
 *** Miscellaneous
 **** [[https://quantumkoans.com/][Quantum Koans]]
      Half-tongue-in-cheek, half-serious musings on the nature of QM
