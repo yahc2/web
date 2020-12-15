@@ -5,6 +5,11 @@
   - [[http://www.erights.org/][E lang]]
 
 
-* Fediverse, activitypub. others
+* Fediverse, activitypub. others, gemini, hypercore, ...
   - https://www.w3.org/TR/activitypub/
   - https://forgefed.peers.community
+  - https://hypercore-protocol.org/
+  - https://radicle.xyz/
+  - https://gemini.circumlunar.space/docs/faq.html
+  - https://dat.foundation/
+  - https://scuttlebutt.nz/
