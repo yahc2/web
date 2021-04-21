@@ -1,5 +1,5 @@
 * Topics
-** [[./nyxt.org]]
+** [[./nyxt.org][Nyxt - Programmable Web Browser in Common Lisp]]
 ** [[./gccemacs.org][gccemacs]]
 ** [[file:quantum-computing.org][Quantum Computing]]
 ** [[./beautiful-racket.org][Beautiful Racket]]

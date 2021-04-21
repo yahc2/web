@@ -8,16 +8,13 @@
   #+begin_src lisp
     (defun hints-generate (length)
       "Generates hints that will appear on the elements"
-             (loop
-                   with gen = (gen-lexicographic-sequence)
-                   repeat (parse-integer length :junk-allowed t)
-                   collect (funcall gen)))
+      (loop
+	with gen = (gen-lexicographic-sequence)
+	repeat (parse-integer length :junk-allowed t)
+	collect (funcall gen)))
+
     (define-parenscript my-hint (y)
-                (ps:let ((y 3))
-                  (ps:chain console
-                            (log (ps:lisp (apply 'vector (hints-generate (ps:ps* y))))))))
-    (define-parenscript my-hint (y)
-                     (ps:let ((y 3))
-                       (ps:chain console
-                             (log (ps:lisp (apply 'vector (hints-generate (ps:ps* y))))))))
+      (ps:let ((y 3))
+	(ps:chain console
+		  (log (ps:lisp (apply 'vector (hints-generate (ps:ps* y))))))))
   #+end_src

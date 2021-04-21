@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-12-09 Wed 09:05 -->
+<!-- 2021-04-21 śro 22:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Raimon Grau" />
+<meta name="author" content="Wojciech S. Gac" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -251,47 +251,47 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd9b5f78">Quantum Computing - Conceptual Introduction</a>
+<li><a href="#org3495481">Quantum Computing - Conceptual Introduction</a>
 <ul>
-<li><a href="#org2675ebf">Preliminaries - What Is QC?</a>
+<li><a href="#org75ebcf2">Preliminaries - What Is QC?</a>
 <ul>
-<li><a href="#org6a0ed11">Building Blocks</a></li>
-<li><a href="#org2bee406">Mathematics of QC</a></li>
-<li><a href="#org729ceea">Examples of Quantum Circuits</a></li>
+<li><a href="#org67fe3af">Building Blocks</a></li>
+<li><a href="#org096f186">Mathematics of QC</a></li>
+<li><a href="#orgc8b2941">Examples of Quantum Circuits</a></li>
 </ul>
 </li>
-<li><a href="#org870e37d">Useful Resources</a>
+<li><a href="#orga12f403">Useful Resources</a>
 <ul>
-<li><a href="#org36e2161">Quantum Programming Languages</a></li>
-<li><a href="#orgbf51d12">Circuit Visualization</a></li>
-<li><a href="#org243be4a">Cheatsheets</a></li>
-<li><a href="#org645ea06">Blogs</a></li>
-<li><a href="#org56ddabf">Books &amp; Lecture Notes</a></li>
-<li><a href="#org4fad3de">Websites</a></li>
-<li><a href="#orgbdebfac">Podcasts</a></li>
-<li><a href="#org437d4f0">Miscellaneous</a></li>
-</ul>
-</li>
+<li><a href="#orgaa449a3">Quantum Programming Languages</a></li>
+<li><a href="#org585f45c">Circuit Visualization</a></li>
+<li><a href="#orgea2ea09">Cheatsheets</a></li>
+<li><a href="#org2a33740">Blogs</a></li>
+<li><a href="#org55bdf89">Books &amp; Lecture Notes</a></li>
+<li><a href="#org84575bd">Websites</a></li>
+<li><a href="#orgaeeaee4">Podcasts</a></li>
+<li><a href="#org18e33b1">Miscellaneous</a></li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
 </div>
 </div>
-<div id="outline-container-orgd9b5f78" class="outline-2">
-<h2 id="orgd9b5f78">Quantum Computing - Conceptual Introduction</h2>
-<div class="outline-text-2" id="text-orgd9b5f78">
+<div id="outline-container-org3495481" class="outline-2">
+<h2 id="org3495481">Quantum Computing - Conceptual Introduction</h2>
+<div class="outline-text-2" id="text-org3495481">
 </div>
-<div id="outline-container-org2675ebf" class="outline-3">
-<h3 id="org2675ebf">Preliminaries - What Is QC?</h3>
-<div class="outline-text-3" id="text-org2675ebf">
+<div id="outline-container-org75ebcf2" class="outline-3">
+<h3 id="org75ebcf2">Preliminaries - What Is QC?</h3>
+<div class="outline-text-3" id="text-org75ebcf2">
 </div>
-<div id="outline-container-org6a0ed11" class="outline-4">
-<h4 id="org6a0ed11">Building Blocks</h4>
-<div class="outline-text-4" id="text-org6a0ed11">
+<div id="outline-container-org67fe3af" class="outline-4">
+<h4 id="org67fe3af">Building Blocks</h4>
+<div class="outline-text-4" id="text-org67fe3af">
 </div>
 <ul class="org-ul">
-<li><a id="org79d0e66"></a>Qubits<br />
-<div class="outline-text-5" id="text-org79d0e66">
+<li><a id="orgc1661ad"></a>Qubits<br />
+<div class="outline-text-5" id="text-orgc1661ad">
 <ul class="org-ul">
 <li>Short for <code>quantum bits</code>.</li>
 <li>Just like classical bits they need a well-defined physical
@@ -308,8 +308,8 @@ quantum error correction scheme)</li>
 </ul>
 </div>
 </li>
-<li><a id="orga1d1cdf"></a>Quantum Gates<br />
-<div class="outline-text-5" id="text-orga1d1cdf">
+<li><a id="org128a156"></a>Quantum Gates<br />
+<div class="outline-text-5" id="text-org128a156">
 <ul class="org-ul">
 <li>QC analogues of logic gates</li>
 <li>Mathematically they are represented by <code>unitary</code> matrices (more
@@ -325,8 +325,8 @@ conditionalize certain actions, etc.</li>
 </ul>
 </div>
 </li>
-<li><a id="orgb67d653"></a>Measurement<br />
-<div class="outline-text-5" id="text-orgb67d653">
+<li><a id="org67414d6"></a>Measurement<br />
+<div class="outline-text-5" id="text-org67414d6">
 <ul class="org-ul">
 <li>Irreversible operation on a qubit or quantum register</li>
 <li>Measurements are performed relative to a basis of base vectors</li>
@@ -339,8 +339,8 @@ later)</li>
 </ul>
 </div>
 </li>
-<li><a id="orgbfb2063"></a>Ancillary qubits<br />
-<div class="outline-text-5" id="text-orgbfb2063">
+<li><a id="org7693a2c"></a>Ancillary qubits<br />
+<div class="outline-text-5" id="text-org7693a2c">
 <ul class="org-ul">
 <li>Because reversibility sometimes requires outputting additional
 information, it may be necessary to use additional, so called
@@ -354,8 +354,8 @@ entanglement.</li>
 </ul>
 </div>
 </li>
-<li><a id="orgbc8350f"></a>Decoherence<br />
-<div class="outline-text-5" id="text-orgbc8350f">
+<li><a id="org41142a8"></a>Decoherence<br />
+<div class="outline-text-5" id="text-org41142a8">
 <ul class="org-ul">
 <li>Unwanted, but unavoidable (?) interference between
 computational elements (qubits) and their (quantum-mechanical)
@@ -369,15 +369,15 @@ shielding, quantum error correction, etc.</li>
 </li>
 </ul>
 </div>
-<div id="outline-container-org2bee406" class="outline-4">
-<h4 id="org2bee406">Mathematics of QC</h4>
-<div class="outline-text-4" id="text-org2bee406">
+<div id="outline-container-org096f186" class="outline-4">
+<h4 id="org096f186">Mathematics of QC</h4>
+<div class="outline-text-4" id="text-org096f186">
 </div>
 <ul class="org-ul">
-<li><a id="org4de46af"></a>Preliminaries<br />
+<li><a id="orgb5f4ba0"></a>Preliminaries<br />
 <ul class="org-ul">
-<li><a id="org269d198"></a>Complex Numbers<br />
-<div class="outline-text-6" id="text-org269d198">
+<li><a id="org50aa3d3"></a>Complex Numbers<br />
+<div class="outline-text-6" id="text-org50aa3d3">
 <ul class="org-ul">
 <li>Complex numbers (commonly denoted as \(\mathbb{C}\)) are a
 generalization of real numbers (\(\mathbb{R}\)) but with the
@@ -416,8 +416,8 @@ and complex conjugation is reflection about the real axis.</li>
 </div>
 </li>
 
-<li><a id="org300ad59"></a>Linear Algebra<br />
-<div class="outline-text-6" id="text-org300ad59">
+<li><a id="orgc7959c5"></a>Linear Algebra<br />
+<div class="outline-text-6" id="text-orgc7959c5">
 <ul class="org-ul">
 <li>Nice interactive introduction/review available <a href="https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra">here</a></li>
 </ul>
@@ -425,10 +425,10 @@ and complex conjugation is reflection about the real axis.</li>
 </li>
 </ul>
 </li>
-<li><a id="org050ffd6"></a>Mathematical concepts<br />
+<li><a id="org67c65c3"></a>Mathematical concepts<br />
 <ul class="org-ul">
-<li><a id="org080c67d"></a>Ket (vector)<br />
-<div class="outline-text-6" id="text-org080c67d">
+<li><a id="org8a6dbc4"></a>Ket (vector)<br />
+<div class="outline-text-6" id="text-org8a6dbc4">
 <ul class="org-ul">
 <li>An ordinary vector can be represented sybolically as a <code>ket</code>
 (after Dirac)</li>
@@ -445,8 +445,8 @@ and complex conjugation is reflection about the real axis.</li>
 </p>
 </div>
 </li>
-<li><a id="org6e2c26d"></a>Bra (covector)<br />
-<div class="outline-text-6" id="text-org6e2c26d">
+<li><a id="org28dde65"></a>Bra (covector)<br />
+<div class="outline-text-6" id="text-org28dde65">
 <ul class="org-ul">
 <li>An object dual to a vector (a <code>covector</code> or <code>differential
         form</code>) can be represented sybolically as a <code>bra</code></li>
@@ -465,8 +465,8 @@ and kets</li>
 </p>
 </div>
 </li>
-<li><a id="org25ff74d"></a>Hermitian adjoint (or conjugate)<br />
-<div class="outline-text-6" id="text-org25ff74d">
+<li><a id="orgb6c68cc"></a>Hermitian adjoint (or conjugate)<br />
+<div class="outline-text-6" id="text-orgb6c68cc">
 <ul class="org-ul">
 <li>A combination of matrix transposition and taking complex
 conjugates of all its elements: \(A^\dagger = (A^T)^* =
@@ -474,8 +474,8 @@ conjugates of all its elements: \(A^\dagger = (A^T)^* =
 </ul>
 </div>
 </li>
-<li><a id="org982c9f7"></a>Unitarity<br />
-<div class="outline-text-6" id="text-org982c9f7">
+<li><a id="orgdb0b2a6"></a>Unitarity<br />
+<div class="outline-text-6" id="text-orgdb0b2a6">
 <ul class="org-ul">
 <li>A matrix is unitary when \(AA^\dagger = A^\dagger A = I\)</li>
 <li>Unitary matrices preserve vector lengths and are thus
@@ -487,8 +487,8 @@ generalizations of rotations \(\langle a A|A a\rangle = \langle
 </ul>
 </div>
 </li>
-<li><a id="orgb340416"></a>Hermiticity (self-adjointedness)<br />
-<div class="outline-text-6" id="text-orgb340416">
+<li><a id="orgb232b08"></a>Hermiticity (self-adjointedness)<br />
+<div class="outline-text-6" id="text-orgb232b08">
 <ul class="org-ul">
 <li>A Hermitian (self-adjoint) matrix is identical to its
 Hermitian conjugate</li>
@@ -500,8 +500,8 @@ properties of a system) are represented as Hermitian operators</li>
 </li>
 </ul>
 </li>
-<li><a id="orged5b599"></a>Basic postulates of Quantum Mechanics<br />
-<div class="outline-text-5" id="text-orged5b599">
+<li><a id="org8cadde8"></a>Basic postulates of Quantum Mechanics<br />
+<div class="outline-text-5" id="text-org8cadde8">
 <ul class="org-ul">
 <li>Each physical state is associated with a Hilbert space \(H\)
 (vector space, where calculus can be applied) with an inner
@@ -519,8 +519,8 @@ possible outcomes of physical measurement</li>
 </ul>
 </div>
 </li>
-<li><a id="org35c7a9b"></a>Dynamics<br />
-<div class="outline-text-5" id="text-org35c7a9b">
+<li><a id="orga6ce391"></a>Dynamics<br />
+<div class="outline-text-5" id="text-orga6ce391">
 <ul class="org-ul">
 <li>The dynamics of a quantum system is given by the Schrödinger
 equation: \(i \hbar \frac{\partial}{\partial
@@ -531,56 +531,56 @@ equation: \(i \hbar \frac{\partial}{\partial
 </ul>
 </div>
 
-<div id="outline-container-org729ceea" class="outline-4">
-<h4 id="org729ceea">Examples of Quantum Circuits</h4>
-<div class="outline-text-4" id="text-org729ceea">
+<div id="outline-container-orgc8b2941" class="outline-4">
+<h4 id="orgc8b2941">Examples of Quantum Circuits</h4>
+<div class="outline-text-4" id="text-orgc8b2941">
 </div>
 <ul class="org-ul">
-<li><a id="org80b396c"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522X%2522,%2522X%2522%5D%5D,%2522init%2522:%5B0,1%5D%7D">NOT gate</a><br />
-<div class="outline-text-5" id="text-org80b396c">
+<li><a id="org65a401b"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522X%2522,%2522X%2522%5D%5D,%2522init%2522:%5B0,1%5D%7D">NOT gate</a><br />
+<div class="outline-text-5" id="text-org65a401b">
 <p>
 Acting on two separate qubits set to \(|0\rangle\) and \(|1\rangle\)
 respectively.
 </p>
 </div>
 </li>
-<li><a id="orga592b94"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522H%2522%5D%5D%7D">Hadamard gate</a><br />
-<div class="outline-text-5" id="text-orga592b94">
+<li><a id="orgbcb462f"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522H%2522%5D%5D%7D">Hadamard gate</a><br />
+<div class="outline-text-5" id="text-orgbcb462f">
 <p>
 Converting a pure state into a superposition
 </p>
 </div>
 </li>
-<li><a id="orga61b856"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522H%2522%5D,%5B%2522H%2522%5D%5D%7D">2 Hadamard gates</a><br />
-<div class="outline-text-5" id="text-orga61b856">
+<li><a id="org5815635"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522H%2522%5D,%5B%2522H%2522%5D%5D%7D">2 Hadamard gates</a><br />
+<div class="outline-text-5" id="text-org5815635">
 <p>
 &#x2026; and back again
 </p>
 </div>
 </li>
-<li><a id="org7837182"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522%25E2%2580%25A2%2522,%2522X%2522%5D%5D%7D">CNOT gate</a><br />
-<div class="outline-text-5" id="text-org7837182">
+<li><a id="org468a0b3"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522%25E2%2580%25A2%2522,%2522X%2522%5D%5D%7D">CNOT gate</a><br />
+<div class="outline-text-5" id="text-org468a0b3">
 <p>
 Controlled NOT
 </p>
 </div>
 </li>
-<li><a id="orgf4b9ae1"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522H%2522%5D,%5B%2522%25E2%2580%25A2%2522,%2522X%2522%5D%5D%7D">Bell state</a><br />
-<div class="outline-text-5" id="text-orgf4b9ae1">
+<li><a id="orge095485"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522H%2522%5D,%5B%2522%25E2%2580%25A2%2522,%2522X%2522%5D%5D%7D">Bell state</a><br />
+<div class="outline-text-5" id="text-orge095485">
 <p>
 Simplest instance of quantum entanglement
 </p>
 </div>
 </li>
-<li><a id="org5bc368e"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522Swap%2522,%2522Swap%2522%5D%5D,%2522init%2522:%5B0,1%5D%7D">SWAP gate</a><br />
-<div class="outline-text-5" id="text-org5bc368e">
+<li><a id="org62baf98"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522Swap%2522,%2522Swap%2522%5D%5D,%2522init%2522:%5B0,1%5D%7D">SWAP gate</a><br />
+<div class="outline-text-5" id="text-org62baf98">
 <p>
 Exchange two qubits connected by the gate
 </p>
 </div>
 </li>
-<li><a id="orge12b775"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522Z%2522,%2522Z%2522%5D%5D,%2522init%2522:%5B0,1%5D%7D">Z gate</a><br />
-<div class="outline-text-5" id="text-orge12b775">
+<li><a id="org55c0f32"></a><a href="https://algassert.com/quirk#circuit=%7B%2522cols%2522:%5B%5B%2522Z%2522,%2522Z%2522%5D%5D,%2522init%2522:%5B0,1%5D%7D">Z gate</a><br />
+<div class="outline-text-5" id="text-org55c0f32">
 <p>
 Negates the \(|1\rangle\) state
 </p>
@@ -589,17 +589,17 @@ Negates the \(|1\rangle\) state
 </ul>
 </div>
 </div>
-<div id="outline-container-org870e37d" class="outline-3">
-<h3 id="org870e37d">Useful Resources</h3>
-<div class="outline-text-3" id="text-org870e37d">
+<div id="outline-container-orga12f403" class="outline-3">
+<h3 id="orga12f403">Useful Resources</h3>
+<div class="outline-text-3" id="text-orga12f403">
 </div>
-<div id="outline-container-org36e2161" class="outline-4">
-<h4 id="org36e2161">Quantum Programming Languages</h4>
-<div class="outline-text-4" id="text-org36e2161">
+<div id="outline-container-orgaa449a3" class="outline-4">
+<h4 id="orgaa449a3">Quantum Programming Languages</h4>
+<div class="outline-text-4" id="text-orgaa449a3">
 </div>
 <ul class="org-ul">
-<li><a id="org60180c0"></a><a href="https://docs.microsoft.com/en-us/quantum/">Q# and Quantum Development Kit</a><br />
-<div class="outline-text-5" id="text-org60180c0">
+<li><a id="org2b13c42"></a><a href="https://docs.microsoft.com/en-us/quantum/">Q# and Quantum Development Kit</a><br />
+<div class="outline-text-5" id="text-org2b13c42">
 <p>
 QPL designed by Microsoft. The QDK contains a quantum simulator
 and many useful debugging tools. Q# programs are embedded within
@@ -607,8 +607,8 @@ C# code, which handles the non-quantum part.
 </p>
 </div>
 </li>
-<li><a id="org1468fbf"></a><a href="https://qiskit.org/">Qiskit</a><br />
-<div class="outline-text-5" id="text-org1468fbf">
+<li><a id="org6dee38e"></a><a href="https://qiskit.org/">Qiskit</a><br />
+<div class="outline-text-5" id="text-org6dee38e">
 <p>
 QPL by IBM. Reasonably mature programming environment, heavy
 integration with Jupyter notebooks, lots of high-quality
@@ -616,8 +616,8 @@ introductory material.
 </p>
 </div>
 </li>
-<li><a id="orgc3d0bad"></a><a href="https://pyquil-docs.rigetti.com/en/stable/">PyQuil and Forest SDK</a><br />
-<div class="outline-text-5" id="text-orgc3d0bad">
+<li><a id="orga4c1755"></a><a href="https://pyquil-docs.rigetti.com/en/stable/">PyQuil and Forest SDK</a><br />
+<div class="outline-text-5" id="text-orga4c1755">
 <p>
 QPL build by Rigetti Computing. Embeds quantum computations
 within ordinary Python code. Unlike Q# it's more of a library
@@ -625,8 +625,8 @@ than separate language. Facilitates experiments with
 </p>
 </div>
 </li>
-<li><a id="org6e00855"></a><a href="https://www.mathstat.dal.ca/~selinger/quipper/">Quipper</a><br />
-<div class="outline-text-5" id="text-org6e00855">
+<li><a id="org7368b70"></a><a href="https://www.mathstat.dal.ca/~selinger/quipper/">Quipper</a><br />
+<div class="outline-text-5" id="text-org7368b70">
 <p>
 A QPL embedded in Haskell. Aspects of quantum computation, such
 as measurement, are represented as monadic types (cf. our
@@ -636,13 +636,13 @@ conversation at Luigi's Lucky Leprechaun)
 </li>
 </ul>
 </div>
-<div id="outline-container-orgbf51d12" class="outline-4">
-<h4 id="orgbf51d12">Circuit Visualization</h4>
-<div class="outline-text-4" id="text-orgbf51d12">
+<div id="outline-container-org585f45c" class="outline-4">
+<h4 id="org585f45c">Circuit Visualization</h4>
+<div class="outline-text-4" id="text-org585f45c">
 </div>
 <ul class="org-ul">
-<li><a id="orge8b7d7a"></a><a href="https://algassert.com/quirk">Quirk</a><br />
-<div class="outline-text-5" id="text-orge8b7d7a">
+<li><a id="org6c179d4"></a><a href="https://algassert.com/quirk">Quirk</a><br />
+<div class="outline-text-5" id="text-org6c179d4">
 <p>
 Simple and intuitive quantum circuit visualizer. Good to untangle
 (hehe&#x2026;) conceptual confusion that sometimes arises when working
@@ -652,21 +652,21 @@ on a problem.
 </li>
 </ul>
 </div>
-<div id="outline-container-org243be4a" class="outline-4">
-<h4 id="org243be4a">Cheatsheets</h4>
-<div class="outline-text-4" id="text-org243be4a">
+<div id="outline-container-orgea2ea09" class="outline-4">
+<h4 id="orgea2ea09">Cheatsheets</h4>
+<div class="outline-text-4" id="text-orgea2ea09">
 </div>
 <ul class="org-ul">
-<li><a id="org8ef490a"></a><a href="https://github.com/microsoft/QuantumKatas/blob/main/quickref/qsharp-quick-reference.pdf">Q# and Algebra Quick Reference</a><br /></li>
+<li><a id="org4a8adcf"></a><a href="https://github.com/microsoft/QuantumKatas/blob/main/quickref/qsharp-quick-reference.pdf">Q# and Algebra Quick Reference</a><br /></li>
 </ul>
 </div>
-<div id="outline-container-org645ea06" class="outline-4">
-<h4 id="org645ea06">Blogs</h4>
-<div class="outline-text-4" id="text-org645ea06">
+<div id="outline-container-org2a33740" class="outline-4">
+<h4 id="org2a33740">Blogs</h4>
+<div class="outline-text-4" id="text-org2a33740">
 </div>
 <ul class="org-ul">
-<li><a id="org087a719"></a><a href="https://www.scottaaronson.com/blog/">Shtetl-Optimized</a><br />
-<div class="outline-text-5" id="text-org087a719">
+<li><a id="org53f1054"></a><a href="https://www.scottaaronson.com/blog/">Shtetl-Optimized</a><br />
+<div class="outline-text-5" id="text-org53f1054">
 <p>
 Scientific blog by Scott Aaronson. Lots of explanations,
 discussions and pointers to other resources.
@@ -675,43 +675,43 @@ discussions and pointers to other resources.
 </li>
 </ul>
 </div>
-<div id="outline-container-org56ddabf" class="outline-4">
-<h4 id="org56ddabf">Books &amp; Lecture Notes</h4>
-<div class="outline-text-4" id="text-org56ddabf">
+<div id="outline-container-org55bdf89" class="outline-4">
+<h4 id="org55bdf89">Books &amp; Lecture Notes</h4>
+<div class="outline-text-4" id="text-org55bdf89">
 </div>
 <ul class="org-ul">
-<li><a id="org85de475"></a><a href="https://www.cambridge.org/pl/academic/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-computation-and-quantum-information-10th-anniversary-edition?format=HB&amp;isbn=9781107002173">Michael Nielsen, Isaac Chuang - Quantum Computation and Quantum Information</a><br />
-<div class="outline-text-5" id="text-org85de475">
+<li><a id="org34e6132"></a><a href="https://www.cambridge.org/pl/academic/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-computation-and-quantum-information-10th-anniversary-edition?format=HB&amp;isbn=9781107002173">Michael Nielsen, Isaac Chuang - Quantum Computation and Quantum Information</a><br />
+<div class="outline-text-5" id="text-org34e6132">
 <p>
 In-depth introduction to QC concepts and discussion of physical
 implementations.
 </p>
 </div>
 </li>
-<li><a id="orgeb0b530"></a><a href="https://www.amazon.com/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565">Scott Aaronson - Quantum Computing Since Democritus</a><br />
-<div class="outline-text-5" id="text-orgeb0b530">
+<li><a id="org0ae9053"></a><a href="https://www.amazon.com/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565">Scott Aaronson - Quantum Computing Since Democritus</a><br />
+<div class="outline-text-5" id="text-org0ae9053">
 <p>
 Slightly humorous and heavily philosophical take on QC and
 complexity theory.
 </p>
 </div>
 </li>
-<li><a id="orgfbfd6c4"></a><a href="https://www.springer.com/gp/book/9783030239213">Jack Hidary - Quantum Computing: An Applied Approach</a><br />
-<div class="outline-text-5" id="text-orgfbfd6c4">
+<li><a id="orga52cbd3"></a><a href="https://www.springer.com/gp/book/9783030239213">Jack Hidary - Quantum Computing: An Applied Approach</a><br />
+<div class="outline-text-5" id="text-orga52cbd3">
 <p>
 Slightly more accessible than "Mike &amp; Ike". Not as in-depth.
 </p>
 </div>
 </li>
-<li><a id="orga9ab8c8"></a><a href="http://theory.caltech.edu/~preskill/ph229/">John Preskill - Lecture Notes for Phys 219/CS 219 - Quantum Computation</a><br />
-<div class="outline-text-5" id="text-orga9ab8c8">
+<li><a id="orgae57536"></a><a href="http://theory.caltech.edu/~preskill/ph229/">John Preskill - Lecture Notes for Phys 219/CS 219 - Quantum Computation</a><br />
+<div class="outline-text-5" id="text-orgae57536">
 <p>
 Well-written, but technical introduction to the topic.
 </p>
 </div>
 </li>
-<li><a id="orge33637a"></a><a href="http://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf?version=1">Linear Algebra for Quantum Computation</a><br />
-<div class="outline-text-5" id="text-orge33637a">
+<li><a id="org6858bf6"></a><a href="http://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf?version=1">Linear Algebra for Quantum Computation</a><br />
+<div class="outline-text-5" id="text-org6858bf6">
 <p>
 Excerpt from the book "Quantum Walks and Search Algorithms" by
 Renato Portugal
@@ -720,13 +720,13 @@ Renato Portugal
 </li>
 </ul>
 </div>
-<div id="outline-container-org4fad3de" class="outline-4">
-<h4 id="org4fad3de">Websites</h4>
-<div class="outline-text-4" id="text-org4fad3de">
+<div id="outline-container-org84575bd" class="outline-4">
+<h4 id="org84575bd">Websites</h4>
+<div class="outline-text-4" id="text-org84575bd">
 </div>
 <ul class="org-ul">
-<li><a id="org3669fc6"></a><a href="https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition">Quantum Computing Primer</a><br />
-<div class="outline-text-5" id="text-org3669fc6">
+<li><a id="org0ae3da2"></a><a href="https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition">Quantum Computing Primer</a><br />
+<div class="outline-text-5" id="text-org0ae3da2">
 <p>
 Series of introductory articles on QC by Daniel Vaughan
 </p>
@@ -734,25 +734,25 @@ Series of introductory articles on QC by Daniel Vaughan
 </li>
 </ul>
 </div>
-<div id="outline-container-orgbdebfac" class="outline-4">
-<h4 id="orgbdebfac">Podcasts</h4>
-<div class="outline-text-4" id="text-orgbdebfac">
+<div id="outline-container-orgaeeaee4" class="outline-4">
+<h4 id="orgaeeaee4">Podcasts</h4>
+<div class="outline-text-4" id="text-orgaeeaee4">
 </div>
 <ul class="org-ul">
-<li><a id="orgdb8f772"></a><a href="https://lexfridman.com/scott-aaronson/">Lex Fridman - Scott Aaronson</a><br /></li>
-<li><a id="org64aa16f"></a><a href="https://lexfridman.com/leonard-susskind/">Lex Fridman - Leonard Susskind</a><br /></li>
-<li><a id="org0987797"></a><a href="https://blog.ycombinator.com/john-preskill-on-quantum-computing/">Y Combinator Podcast - John Preskill</a><br /></li>
-<li><a id="org6b131e8"></a><a href="https://blog.ycombinator.com/scott-aaronson-on-computational-complexity-theory-and-quantum-computers/">Y Combinator Podcast - Scott Aaronson</a><br /></li>
-<li><a id="org1f662c0"></a><a href="https://blog.ycombinator.com/leonard-susskind-on-richard-feynman-the-holographic-principle-and-unanswered-questions-in-physics/">Y Combinator Podcast - Leonard Susskind</a><br /></li>
-<li><a id="org66d5b49"></a><a href="https://blog.ycombinator.com/simon-benjamin-on-architectures-for-quantum-computing/">Y Combinator Podcast - Simon Benjamin</a><br />
-<div class="outline-text-5" id="text-org66d5b49">
+<li><a id="orga09228d"></a><a href="https://lexfridman.com/scott-aaronson/">Lex Fridman - Scott Aaronson</a><br /></li>
+<li><a id="org1b65cf0"></a><a href="https://lexfridman.com/leonard-susskind/">Lex Fridman - Leonard Susskind</a><br /></li>
+<li><a id="orgbab9a7e"></a><a href="https://blog.ycombinator.com/john-preskill-on-quantum-computing/">Y Combinator Podcast - John Preskill</a><br /></li>
+<li><a id="orgdc33322"></a><a href="https://blog.ycombinator.com/scott-aaronson-on-computational-complexity-theory-and-quantum-computers/">Y Combinator Podcast - Scott Aaronson</a><br /></li>
+<li><a id="org1efdf42"></a><a href="https://blog.ycombinator.com/leonard-susskind-on-richard-feynman-the-holographic-principle-and-unanswered-questions-in-physics/">Y Combinator Podcast - Leonard Susskind</a><br /></li>
+<li><a id="org178f094"></a><a href="https://blog.ycombinator.com/simon-benjamin-on-architectures-for-quantum-computing/">Y Combinator Podcast - Simon Benjamin</a><br />
+<div class="outline-text-5" id="text-org178f094">
 <p>
 Discussion of various types of QC architectures
 </p>
 </div>
 </li>
-<li><a id="orgc6ddeef"></a><a href="https://home.cern/news/announcement/computing/online-introductory-lectures-quantum-computing-6-november">CERN online introductory lectures</a><br />
-<div class="outline-text-5" id="text-orgc6ddeef">
+<li><a id="orga9d3db3"></a><a href="https://home.cern/news/announcement/computing/online-introductory-lectures-quantum-computing-6-november">CERN online introductory lectures</a><br />
+<div class="outline-text-5" id="text-orga9d3db3">
 <p>
 The course starts the 6th of November, every Friday till Dec
 18th.
@@ -761,20 +761,20 @@ The course starts the 6th of November, every Friday till Dec
 </li>
 </ul>
 </div>
-<div id="outline-container-org437d4f0" class="outline-4">
-<h4 id="org437d4f0">Miscellaneous</h4>
-<div class="outline-text-4" id="text-org437d4f0">
+<div id="outline-container-org18e33b1" class="outline-4">
+<h4 id="org18e33b1">Miscellaneous</h4>
+<div class="outline-text-4" id="text-org18e33b1">
 </div>
 <ul class="org-ul">
-<li><a id="orgc3b8610"></a><a href="https://quantumkoans.com/">Quantum Koans</a><br />
-<div class="outline-text-5" id="text-orgc3b8610">
+<li><a id="org0d655e7"></a><a href="https://quantumkoans.com/">Quantum Koans</a><br />
+<div class="outline-text-5" id="text-org0d655e7">
 <p>
 Half-tongue-in-cheek, half-serious musings on the nature of QM
 </p>
 </div>
 </li>
-<li><a id="orgc3ae355"></a><a href="https://github.com/microsoft/QuantumKatas">Microsoft Quantum Katas</a><br />
-<div class="outline-text-5" id="text-orgc3ae355">
+<li><a id="org09bcfbb"></a><a href="https://github.com/microsoft/QuantumKatas">Microsoft Quantum Katas</a><br />
+<div class="outline-text-5" id="text-org09bcfbb">
 <p>
 A koan-like approach to teaching QC and Q#. There are two ways to
 run them:
@@ -791,8 +791,8 @@ run them:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Raimon Grau</p>
-<p class="date">Created: 2020-12-09 Wed 09:05</p>
+<p class="author">Author: Wojciech S. Gac</p>
+<p class="date">Created: 2021-04-21 śro 22:37</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
