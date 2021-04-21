@@ -1,4 +1,5 @@
 * Topics
+** [[./nyxt.org]]
 ** [[./gccemacs.org][gccemacs]]
 ** [[file:quantum-computing.org][Quantum Computing]]
 ** [[./beautiful-racket.org][Beautiful Racket]]

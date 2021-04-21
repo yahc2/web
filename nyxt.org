@@ -1,0 +1,23 @@
+#+TITLE: Nyxt
+
+
+* Hints and passing values from cl->js
+  Code for this hinting PR
+  https://github.com/atlas-engineer/nyxt/issues/1290
+
+  #+begin_src lisp
+    (defun hints-generate (length)
+      "Generates hints that will appear on the elements"
+             (loop
+                   with gen = (gen-lexicographic-sequence)
+                   repeat (parse-integer length :junk-allowed t)
+                   collect (funcall gen)))
+    (define-parenscript my-hint (y)
+                (ps:let ((y 3))
+                  (ps:chain console
+                            (log (ps:lisp (apply 'vector (hints-generate (ps:ps* y))))))))
+    (define-parenscript my-hint (y)
+                     (ps:let ((y 3))
+                       (ps:chain console
+                             (log (ps:lisp (apply 'vector (hints-generate (ps:ps* y))))))))
+  #+end_src
