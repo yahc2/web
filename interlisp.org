@@ -1,0 +1,51 @@
+#+HTML_HEAD_EXTRA: <style> img { display:block; } </style>
+* Interlisp, Maiko & Medley
+  [[file:images/Interlisp-D.png]]
+  This page is dedicated to the exploration of Interlisp in its modern
+  flavor. A couple of years ago [[https://larrymasinter.net/][Larry Masinter]], one of the original
+  developers of Xerox Interlisp, rekindled his interest in (or maybe
+  never really lost it) bringing the old Maiko/Medley emulation code
+  up to shape and making it generally usable. This began with a
+  [[https://groups.google.com/forum/#!topic/interlisp/jq0dJQEWDkU][mailing list]] and culminated with the creation of a [[https://github.com/Interlisp][GitHub
+  organization]]. Nowadays, the most complete source of knowledge seems
+  to be the [[https://github.com/interlisp/medley/wiki][Interlisp Wiki]] hosted on GitHub.
+** Installation
+   As of today, the Medley Interlisp environment consists of two
+   components:
+   - [[https://github.com/interlisp/maiko][Maiko]] - low-level implementation of the Medley Interlisp virtual
+     machine, written mostly in C.
+   - [[https://github.com/Interlisp/medley][Medley]] - the actual Interlisp environment, written primarily in
+     Common Lisp
+*** Installing Maiko
+    Maiko requires =make=, =clang= and X11 development libraries,
+    which translates to the following in a typical Debian derivative:
+    #+begin_src bash
+      $ sudo apt install clang make libx11-dev
+    #+end_src
+    First, clone the repo:
+    #+begin_src bash
+      $ git clone https://github.com/Interlisp/maiko
+    #+end_src
+    Next, enter =maiko/bin= and build the project:
+    #+begin_src bash
+      $ cd maiko/bin
+      $ ./makeright x
+    #+end_src
+    You should now have two binaries, =lde= and =ldex= in the
+    =maiko/<ostype>.<cputype>= directory
+    (e.g. =linux.x86_64=). Instructions for building in other
+    environments can be found in the repo.
+*** Installing Medley
+    Clone the repo:
+    #+begin_src bash
+      $ git clone https://github.com/Interlisp/medley
+    #+end_src
+    Then enter the =medley= directory and run:
+    #+begin_src bash
+      $ ./run-medley
+    #+end_src
+    This will assume certain defaults regarding screen size, location
+    of the Maiko binaries, etc. The script's source lists various CLI
+    options that it recognizes. One of immediate use is
+    =--dimensions==, which lets you specify the screen size for
+    Medley. 

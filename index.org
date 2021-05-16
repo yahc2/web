@@ -5,3 +5,4 @@
 ** [[./beautiful-racket.org][Beautiful Racket]]
 ** [[./fediverse-et-al.org][Fediverse, Spritely, and Pals]]
 ** [[file:hacking-culture-and-hacking-spirit.org][Hacking Culture & Hacking Spirit]]
+** [[file:interlisp.org][Interlisp, Maiko & Medley]]

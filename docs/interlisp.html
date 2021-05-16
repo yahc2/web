@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-05-16 nie 15:35 -->
+<!-- 2021-05-16 nie 16:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -200,6 +200,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<style> img { display:block; } </style>
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -229,50 +230,114 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga85c972">Topics</a>
+<li><a href="#orgae01aa5">Interlisp, Maiko &amp; Medley</a>
 <ul>
-<li><a href="#org92cf12b">Nyxt - Programmable Web Browser in Common Lisp</a></li>
-<li><a href="#org0f41163">gccemacs</a></li>
-<li><a href="#org9de61c0">Quantum Computing</a></li>
-<li><a href="#orgbe464a5">Beautiful Racket</a></li>
-<li><a href="#org6355c5b">Fediverse, Spritely, and Pals</a></li>
-<li><a href="#orgcb20416">Hacking Culture &amp; Hacking Spirit</a></li>
-<li><a href="#org5040a7b">Interlisp, Maiko &amp; Medley</a></li>
+<li><a href="#org43cb1c1">Installation</a>
+<ul>
+<li><a href="#org850d6cc">Installing Maiko</a></li>
+<li><a href="#org2f1e8bd">Installing Medley</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga85c972" class="outline-2">
-<h2 id="orga85c972">Topics</h2>
-<div class="outline-text-2" id="text-orga85c972">
+<div id="outline-container-orgae01aa5" class="outline-2">
+<h2 id="orgae01aa5">Interlisp, Maiko &amp; Medley</h2>
+<div class="outline-text-2" id="text-orgae01aa5">
+<p>
+<img src="images/Interlisp-D.png" alt="Interlisp-D.png" />
+This page is dedicated to the exploration of Interlisp in its modern
+flavor. A couple of years ago <a href="https://larrymasinter.net/">Larry Masinter</a>, one of the original
+developers of Xerox Interlisp, rekindled his interest in (or maybe
+never really lost it) bringing the old Maiko/Medley emulation code
+up to shape and making it generally usable. This began with a
+<a href="https://groups.google.com/forum/#!topic/interlisp/jq0dJQEWDkU">mailing list</a> and culminated with the creation of a <a href="https://github.com/Interlisp">GitHub
+organization</a>. Nowadays, the most complete source of knowledge seems
+to be the <a href="https://github.com/interlisp/medley/wiki">Interlisp Wiki</a> hosted on GitHub.
+</p>
 </div>
-<div id="outline-container-org92cf12b" class="outline-3">
-<h3 id="org92cf12b"><a href="./nyxt.html">Nyxt - Programmable Web Browser in Common Lisp</a></h3>
+<div id="outline-container-org43cb1c1" class="outline-3">
+<h3 id="org43cb1c1">Installation</h3>
+<div class="outline-text-3" id="text-org43cb1c1">
+<p>
+As of today, the Medley Interlisp environment consists of two
+components:
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/interlisp/maiko">Maiko</a> - low-level implementation of the Medley Interlisp virtual
+machine, written mostly in C.</li>
+<li><a href="https://github.com/Interlisp/medley">Medley</a> - the actual Interlisp environment, written primarily in
+Common Lisp</li>
+</ul>
 </div>
-<div id="outline-container-org0f41163" class="outline-3">
-<h3 id="org0f41163"><a href="./gccemacs.html">gccemacs</a></h3>
+<div id="outline-container-org850d6cc" class="outline-4">
+<h4 id="org850d6cc">Installing Maiko</h4>
+<div class="outline-text-4" id="text-org850d6cc">
+<p>
+Maiko requires <code>make</code>, <code>clang</code> and X11 development libraries,
+which translates to the following in a typical Debian derivative:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">$ sudo apt install clang make libx11-dev
+</pre>
 </div>
-<div id="outline-container-org9de61c0" class="outline-3">
-<h3 id="org9de61c0"><a href="quantum-computing.html">Quantum Computing</a></h3>
+<p>
+First, clone the repo:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">$ git clone https://github.com/Interlisp/maiko
+</pre>
 </div>
-<div id="outline-container-orgbe464a5" class="outline-3">
-<h3 id="orgbe464a5"><a href="./beautiful-racket.html">Beautiful Racket</a></h3>
+<p>
+Next, enter <code>maiko/bin</code> and build the project:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">$ cd maiko/bin
+$ ./makeright x
+</pre>
 </div>
-<div id="outline-container-org6355c5b" class="outline-3">
-<h3 id="org6355c5b"><a href="./fediverse-et-al.html">Fediverse, Spritely, and Pals</a></h3>
+<p>
+You should now have two binaries, <code>lde</code> and <code>ldex</code> in the
+<code>maiko/&lt;ostype&gt;.&lt;cputype&gt;</code> directory
+(e.g. <code>linux.x86_64</code>). Instructions for building in other
+environments can be found in the repo.
+</p>
 </div>
-<div id="outline-container-orgcb20416" class="outline-3">
-<h3 id="orgcb20416"><a href="hacking-culture-and-hacking-spirit.html">Hacking Culture &amp; Hacking Spirit</a></h3>
 </div>
-<div id="outline-container-org5040a7b" class="outline-3">
-<h3 id="org5040a7b"><a href="interlisp.html">Interlisp, Maiko &amp; Medley</a></h3>
+<div id="outline-container-org2f1e8bd" class="outline-4">
+<h4 id="org2f1e8bd">Installing Medley</h4>
+<div class="outline-text-4" id="text-org2f1e8bd">
+<p>
+Clone the repo:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">$ git clone https://github.com/Interlisp/medley
+</pre>
+</div>
+<p>
+Then enter the <code>medley</code> directory and run:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">$ ./run-medley
+</pre>
+</div>
+<p>
+This will assume certain defaults regarding screen size, location
+of the Maiko binaries, etc. The script's source lists various CLI
+options that it recognizes. One of immediate use is
+<code>--dimensions=</code>, which lets you specify the screen size for
+Medley.
+</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Wojciech S. Gac</p>
-<p class="date">Created: 2021-05-16 nie 15:35</p>
+<p class="date">Created: 2021-05-16 nie 16:11</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
