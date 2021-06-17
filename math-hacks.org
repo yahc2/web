@@ -38,8 +38,8 @@
     (defun choose (n k)
       (if (or (zerop k) (= k n) (< n 2))	; Handle edges of the triangle
 	  1
-	(+ (choose2 (1- n) (1- k))
-	   (choose2 (1- n) k))))
+	(+ (choose (1- n) (1- k))
+	   (choose (1- n) k))))
   #+end_src
   And, sure enough, one can verify that it does in fact produce
   correct values e.g. by reconstructing part of Pascal's triangle with

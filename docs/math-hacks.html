@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-17 czw 22:38 -->
+<!-- 2021-06-17 czw 23:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -279,7 +279,7 @@ of ways to choose an unordered set of \(k\) items out of \(n\). The way
 the values grow for increasing \(n\) can be visualized using Pascal's
 triangle:
 </p>
-<pre class="example" id="org7fb451e">
+<pre class="example" id="org1822165">
 0:                  1         
 1:                1   1        
 2:              1   2   1       
@@ -303,8 +303,8 @@ function (Elisp/Common Lisp):
 <pre class="src src-elisp">(defun choose (n k)
   (if (or (zerop k) (= k n) (&lt; n 2))	; Handle edges of the triangle
       1
-    (+ (choose2 (1- n) (1- k))
-       (choose2 (1- n) k))))
+    (+ (choose (1- n) (1- k))
+       (choose (1- n) k))))
 </pre>
 </div>
 <p>
@@ -336,7 +336,7 @@ nil
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Wojciech S. Gac</p>
-<p class="date">Created: 2021-06-17 czw 22:38</p>
+<p class="date">Created: 2021-06-17 czw 23:39</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
