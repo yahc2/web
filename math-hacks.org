@@ -1,0 +1,64 @@
+#+HTML_HEAD_EXTRA: <style> img { display:block; } </style>
+* Topological interpretation of binomial coefficient
+  Recently I was trying to visualize Pascal's triangle as a kind of a
+  graph, that can be traversed from the /root/ down. It struck me that
+  the coefficient in a particular node/vertex not only expresses the
+  sum of the coefficients of its immediate neighbors from the row
+  above (the elementary school construction of the triangle), but it's
+  also the number of unique trajectories leading from the root to that
+  vertex. This, in turn, led me to think of a recursive definition of
+  $\binom{n}{k}$ that calculates the value by "walking" these
+  trajectories.
+
+  As a reminder, the binomial coefficient is defined as follows: $$
+  \binom{n}{k} = \frac{n!}{(n-k)!k!}  $$ In CS/statistical settings it
+  is also frequently called /choose/, because it describes the number
+  of ways to choose an unordered set of $k$ items out of $n$. The way
+  the values grow for increasing $n$ can be visualized using Pascal's
+  triangle:
+  #+begin_example
+    0:                  1         
+    1:                1   1        
+    2:              1   2   1       
+    3:            1   3   3   1      
+    4:          1   4   6   4   1     
+    5:        1   5  10   10  5   1    
+    6:      1   6  15   20  15  6   1   
+    7:    1   7  21   35  35  21  7   1   
+    8:  1   8  28   56  70  56  28  8   1
+  #+end_example
+
+  Just as the elementary school relation defines a coefficient in
+  terms of its neighbors one row up, one can think that in order to
+  know the number of trajectories leading to a vertex one needs to add
+  the number of trajectories leading to its left and right neighbor
+  one row above. Using this knowledge we can define the following
+  function (Elisp/Common Lisp):
+  #+begin_src elisp
+    (defun choose (n k)
+      (if (or (zerop k) (= k n) (< n 2))	; Handle edges of the triangle
+	  1
+	(+ (choose2 (1- n) (1- k))
+	   (choose2 (1- n) k))))
+  #+end_src
+  And, sure enough, one can verify that it does in fact produce
+  correct values e.g. by reconstructing part of Pascal's triangle with
+  it:
+  #+begin_src elisp
+    ELISP> (loop
+	    for n from 0 to 6
+	    do
+	    (princ (loop
+		    for k from 0 to n
+		    collect (choose n k)))
+	    (terpri))
+    (1)
+    (1 1)
+    (1 2 1)
+    (1 3 3 1)
+    (1 4 6 4 1)
+    (1 5 10 10 5 1)
+    (1 6 15 20 15 6 1)
+
+    nil
+  #+end_src
