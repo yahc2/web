@@ -156,20 +156,20 @@
        t}\Psi(\mathbf{r},t) = \hat H \Psi(\mathbf{r},t)$
 
 *** Examples of Quantum Circuits
-**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522X%2522,%2522X%2522%5D%5D,%2522init%2522:%5B0,1%5D}][NOT gate]]
+**** [[https://algassert.com/quirk#circuit={%22cols%22:\[\[%22X%22,%22X%22\]\],%22init%22:\[0,1\]}][NOT gate]]
      Acting on two separate qubits set to $|0\rangle$ and $|1\rangle$
      respectively.
-**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522H%2522%5D%5D}][Hadamard gate]]
+**** [[https://algassert.com/quirk#circuit={%22cols%22:\[\[%22H%22,%22H%22\]\],%22init%22:\[0,1\]}][Hadamard gate]]
      Converting a pure state into a superposition
-**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522H%2522%5D,%5B%2522H%2522%5D%5D}][2 Hadamard gates]]
+**** [[https://algassert.com/quirk#circuit={%22cols%22:\[\[%22H%22,%22H%22\],\[%22H%22,%22H%22\]\],%22init%22:\[0,1\]}][2 Hadamard gates]]
      ... and back again
-**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522%25E2%2580%25A2%2522,%2522X%2522%5D%5D}][CNOT gate]]
+**** [[https://algassert.com/quirk#circuit={%22cols%22:\[\[%22%E2%80%A2%22,%22X%22\],\[1,1,%22%E2%80%A2%22,%22X%22\]\],%22init%22:\[1\]}][CNOT gate]]
      Controlled NOT
-**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522H%2522%5D,%5B%2522%25E2%2580%25A2%2522,%2522X%2522%5D%5D}][Bell state]]
+**** [[https://algassert.com/quirk#circuit={%22cols%22:\[\[%22H%22\],\[%22%E2%80%A2%22,%22X%22\]\]}][Bell state]]
      Simplest instance of quantum entanglement
-**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522Swap%2522,%2522Swap%2522%5D%5D,%2522init%2522:%5B0,1%5D}][SWAP gate]]
+**** [[https://algassert.com/quirk#circuit={%22cols%22:\[\[%22Swap%22,%22Swap%22\],\[1,1,%22Swap%22,%22Swap%22\],\[1,1,1,1,%22Swap%22,%22Swap%22\],\[1,1,1,1,1,1,%22Swap%22,%22Swap%22\]\],%22init%22:\[1,0,0,1,0,0,1,1\]}][SWAP gate]]
      Exchange two qubits connected by the gate
-**** [[https://algassert.com/quirk#circuit={%2522cols%2522:%5B%5B%2522Z%2522,%2522Z%2522%5D%5D,%2522init%2522:%5B0,1%5D}][Z gate]]
+**** [[https://algassert.com/quirk#circuit={%22cols%22:\[\[%22Z%22\],\[1,%22Z%22\]\],%22init%22:\[0,1\]}][Z gate]]
      Negates the $|1\rangle$ state
 ** Useful Resources
 *** Quantum Programming Languages
