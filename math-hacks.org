@@ -18,7 +18,7 @@ As a reminder, the binomial coefficient is defined as follows: $$
 is also frequently called /choose/, because it describes the number
 of ways to choose an unordered set of $k$ items out of $n$. The way
 the values grow for increasing $n$ can be visualized using Pascal's
-triangle:
+triangle (the $k$ th item in the $n$ th row is given by $\binom{n}{k}$):
 #+begin_example
   0:                  1         
   1:                1   1        
