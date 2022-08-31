@@ -3,14 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-17 czw 23:39 -->
+<!-- 2022-08-31 Wed 14:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Wojciech S. Gac" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +30,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +41,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,8 +190,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
@@ -201,55 +200,33 @@
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <style> img { display:block; } </style>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
-<div id="content">
-<div id="table-of-contents">
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0257539">Hacking Culture &amp; Hacking Spirit</a>
+<li><a href="#org3985d28">Hacking Culture &amp; Hacking Spirit</a>
 <ul>
-<li><a href="#orgdcd147e">Books</a></li>
-<li><a href="#org8d1b2b0">Games</a></li>
-<li><a href="#org48e81cf">Videos</a>
+<li><a href="#orgdfa8263">Books</a></li>
+<li><a href="#org83604f3">Games</a></li>
+<li><a href="#org74e53c4">Videos</a>
 <ul>
-<li><a href="#org830d907">Interviews</a></li>
+<li><a href="#org95bb439">Interviews</a></li>
 </ul>
 </li>
-<li><a href="#org4d5afee">Articles</a></li>
-<li><a href="#org97f697e">Websites</a></li>
-<li><a href="#orgb4ed2ac">Operating Systems</a>
+<li><a href="#orgb7d6f7b">Articles</a></li>
+<li><a href="#org6405654">Websites</a></li>
+<li><a href="#org13167c5">Operating Systems</a>
 <ul>
-<li><a href="#org819897d">Unix</a></li>
-<li><a href="#org6a83d98">Incompatible Timesharing System</a></li>
+<li><a href="#org49acd4a">Unix</a></li>
+<li><a href="#orgf7b8cb2">Incompatible Timesharing System</a></li>
 </ul>
 </li>
-<li><a href="#org6ddf383">Retrocomputing</a>
+<li><a href="#org1879669">Retrocomputing</a>
 <ul>
-<li><a href="#org42cc540">Emulation</a></li>
+<li><a href="#orgfc4f0e8">Emulation</a></li>
 </ul>
 </li>
 </ul>
@@ -257,9 +234,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org0257539" class="outline-2">
-<h2 id="org0257539">Hacking Culture &amp; Hacking Spirit</h2>
-<div class="outline-text-2" id="text-org0257539">
+<div id="outline-container-org3985d28" class="outline-2">
+<h2 id="org3985d28">Hacking Culture &amp; Hacking Spirit</h2>
+<div class="outline-text-2" id="text-org3985d28">
 <p>
 The idea behind this section is to collect various resources -
 digital or otherwise - expounding the frenetic and restless spirit
@@ -269,13 +246,13 @@ hacking, they succeed at evoking a certain frame of mind&#x2026;
 <img src="images/eliza-fulfilled-life.gif" alt="eliza-fulfilled-life.gif" />
 </p>
 </div>
-<div id="outline-container-orgdcd147e" class="outline-3">
-<h3 id="orgdcd147e">Books</h3>
-<div class="outline-text-3" id="text-orgdcd147e">
+<div id="outline-container-orgdfa8263" class="outline-3">
+<h3 id="orgdfa8263">Books</h3>
+<div class="outline-text-3" id="text-orgdfa8263">
 </div>
 <ul class="org-ul">
-<li><a id="org37c99f4"></a><a href="https://www.amazon.com/What-Dormouse-Said-Counterculture-Personal/dp/0143036769">John Markoff - What the Dormouse Said: How the Sixties Counterculture Shaped the Personal Computer Industry</a><br />
-<div class="outline-text-5" id="text-org37c99f4">
+<li><a id="org151acae"></a><a href="https://www.amazon.com/What-Dormouse-Said-Counterculture-Personal/dp/0143036769">John Markoff - What the Dormouse Said: How the Sixties Counterculture Shaped the Personal Computer Industry</a><br />
+<div class="outline-text-5" id="text-org151acae">
 <p>
 A very West Coast, countercultural account of the development of
 computing and its percolation to the people. Gives a lot of
@@ -285,12 +262,12 @@ condition.
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orgc7dede4"></a><a href="https://web.archive.org/web/20160305182539/http://www.americanscientist.org/bookshelf/pub/early-computings-long-strange-trip">Jaron Lanier's review of the book</a><br /></li>
-<li><a id="org88bead0"></a><a href="https://web.archive.org/web/20110721001434/http://www.peaceworkmagazine.org/pwork/0508/050814.htm">Edward Hasbrouck's review of the book</a><br /></li>
+<li><a id="org8cbeeaf"></a><a href="https://web.archive.org/web/20160305182539/http://www.americanscientist.org/bookshelf/pub/early-computings-long-strange-trip">Jaron Lanier's review of the book</a><br /></li>
+<li><a id="org0aa3352"></a><a href="https://web.archive.org/web/20110721001434/http://www.peaceworkmagazine.org/pwork/0508/050814.htm">Edward Hasbrouck's review of the book</a><br /></li>
 </ul>
 </li>
-<li><a id="org86b4f23"></a><a href="https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396">Steven Levy - Hackers: Heroes of the Computer Revolution</a><br />
-<div class="outline-text-5" id="text-org86b4f23">
+<li><a id="org00160a5"></a><a href="https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396">Steven Levy - Hackers: Heroes of the Computer Revolution</a><br />
+<div class="outline-text-5" id="text-org00160a5">
 <p>
 The canonical history of the hacker community. Divided into three
 parts dealing with the MIT hackers (60s mostly), West Coast
@@ -301,13 +278,13 @@ exalted at times, but still fun to read.
 </li>
 </ul>
 </div>
-<div id="outline-container-org8d1b2b0" class="outline-3">
-<h3 id="org8d1b2b0">Games</h3>
-<div class="outline-text-3" id="text-org8d1b2b0">
+<div id="outline-container-org83604f3" class="outline-3">
+<h3 id="org83604f3">Games</h3>
+<div class="outline-text-3" id="text-org83604f3">
 </div>
 <ul class="org-ul">
-<li><a id="org44c9c19"></a><a href="http://www.zachtronics.com/eliza/">Eliza</a><br />
-<div class="outline-text-5" id="text-org44c9c19">
+<li><a id="orgce5ec5c"></a><a href="http://www.zachtronics.com/eliza/">Eliza</a><br />
+<div class="outline-text-5" id="text-orgce5ec5c">
 <p>
 More a visual novel than game. Centers around Evelyn, who used to
 work on therapeutic applications of AI for a large company. After
@@ -317,8 +294,8 @@ meditative.
 </p>
 </div>
 </li>
-<li><a id="org109baa9"></a><a href="http://www.zachtronics.com/exapunks/">Exapunks</a><br />
-<div class="outline-text-5" id="text-org109baa9">
+<li><a id="orgd7de72e"></a><a href="http://www.zachtronics.com/exapunks/">Exapunks</a><br />
+<div class="outline-text-5" id="text-orgd7de72e">
 <p>
 A hacking game set in the alternative 90s (what with the gray and
 red WinAmp-y interfaces). Provides an interesting and moody
@@ -329,8 +306,8 @@ in a simple machine language.
 </p>
 </div>
 </li>
-<li><a id="orgff8c4aa"></a><a href="http://www.zachtronics.com/shenzhen-io/">Shenzhen I/O</a><br />
-<div class="outline-text-5" id="text-orgff8c4aa">
+<li><a id="orgd47b614"></a><a href="http://www.zachtronics.com/shenzhen-io/">Shenzhen I/O</a><br />
+<div class="outline-text-5" id="text-orgd47b614">
 <p>
 An electronics/assembly hacking game. An American expat in
 Shenzhen, China goes to work for Longteng Ltd. - an electronics
@@ -339,8 +316,8 @@ design. The programming model is a simple assembly language.
 </p>
 </div>
 </li>
-<li><a id="org97eb47e"></a>Dunnet<br />
-<div class="outline-text-5" id="text-org97eb47e">
+<li><a id="orgf85dd67"></a>Dunnet<br />
+<div class="outline-text-5" id="text-orgf85dd67">
 <p>
 Text adventure written by Ron Schnell. Part of every instance of
 GNU/Emacs since forever. <code>M-x dunnet</code>. Interesting plot twist
@@ -348,8 +325,8 @@ unfolds when&#x2026;
 </p>
 </div>
 </li>
-<li><a id="org772de3b"></a><a href="https://hadeanlands.com/">Hadean Lands</a><br />
-<div class="outline-text-5" id="text-org772de3b">
+<li><a id="org2fd4ae6"></a><a href="https://hadeanlands.com/">Hadean Lands</a><br />
+<div class="outline-text-5" id="text-org2fd4ae6">
 <p>
 Text adventure from IF legend Andrew Plotkin. An apprentice
 alchemist needs to survive after his alchemically-powered
@@ -358,8 +335,8 @@ Starts on Saturday", meets Count Cagliostro, meets&#x2026;
 </p>
 </div>
 </li>
-<li><a id="orgf19554d"></a><a href="https://www.funghisoft.com/mhrd">MHRD</a><br />
-<div class="outline-text-5" id="text-orgf19554d">
+<li><a id="org12e7364"></a><a href="https://www.funghisoft.com/mhrd">MHRD</a><br />
+<div class="outline-text-5" id="text-org12e7364">
 <p>
 Digital circuit design simulator. You're employed by a fictional
 company by the name of&#x2026; Microhard. Your objective is to build
@@ -369,19 +346,33 @@ culminate in a design for a complete (albeit simple) CPU.
 </p>
 </div>
 </li>
+<li><a id="org9fb7ca3"></a><a href="https://www.zachtronics.com/last-call-bbs/">Last Call BBS</a><br />
+<div class="outline-text-5" id="text-org9fb7ca3">
+<p>
+Described as Zachtronics' "love letter" the early home computer
+era. Set in the environment of a fictional Sawayama Z5 computer (also
+known from Exapunks), it feels like actually using the system,
+complete with modem sounds and limited bandwidth. The BBS system from
+the title lets one download several games in the spirit of early days,
+including a logic-based dungeon puzzle, circuit simulator and
+biohacking. If not the most exciting of Zachtronics games, it
+certainly gives off a nice vibe.
+</p>
+</div>
+</li>
 </ul>
 </div>
-<div id="outline-container-org48e81cf" class="outline-3">
-<h3 id="org48e81cf">Videos</h3>
-<div class="outline-text-3" id="text-org48e81cf">
+<div id="outline-container-org74e53c4" class="outline-3">
+<h3 id="org74e53c4">Videos</h3>
+<div class="outline-text-3" id="text-org74e53c4">
 </div>
-<div id="outline-container-org830d907" class="outline-4">
-<h4 id="org830d907">Interviews</h4>
-<div class="outline-text-4" id="text-org830d907">
+<div id="outline-container-org95bb439" class="outline-4">
+<h4 id="org95bb439">Interviews</h4>
+<div class="outline-text-4" id="text-org95bb439">
 </div>
 <ul class="org-ul">
-<li><a id="orgffe85ad"></a><a href="https://www.youtube.com/watch?v=fhOHn9TClXY">Joe Armstrong Interviews Alan Kay</a><br />
-<div class="outline-text-5" id="text-orgffe85ad">
+<li><a id="org8e84481"></a><a href="https://www.youtube.com/watch?v=fhOHn9TClXY">Joe Armstrong Interviews Alan Kay</a><br />
+<div class="outline-text-5" id="text-org8e84481">
 <p>
 A fascinating interview that Rai recommended to me a while
 ago. Joe interrupts Alan more than necessary, but still&#x2026; This
@@ -393,13 +384,13 @@ projects that have mostly been forgotten.
 </ul>
 </div>
 </div>
-<div id="outline-container-org4d5afee" class="outline-3">
-<h3 id="org4d5afee">Articles</h3>
-<div class="outline-text-3" id="text-org4d5afee">
+<div id="outline-container-orgb7d6f7b" class="outline-3">
+<h3 id="orgb7d6f7b">Articles</h3>
+<div class="outline-text-3" id="text-orgb7d6f7b">
 </div>
 <ul class="org-ul">
-<li><a id="orgf813958"></a><a href="https://wiki.matthew.nz/view/zenclavier">Zenclavier</a><br />
-<div class="outline-text-5" id="text-orgf813958">
+<li><a id="orgc796468"></a><a href="https://wiki.matthew.nz/view/zenclavier">Zenclavier</a><br />
+<div class="outline-text-5" id="text-orgc796468">
 <p>
 Musings on how interfaces get in the way of actually manipulating
 ideas. Taking Vim as the prime example of minimizing overhead,
@@ -407,15 +398,25 @@ the author ponders the importance of getting "zenned out" easily.
 </p>
 </div>
 </li>
+<li><a id="orgd118276"></a><a href="https://web.archive.org/web/20210709182956/http://spz.socionet.ru/~digital-economy/files/DE-2020-01-09.pdf">Establishment of First Military and Civilian Computing Centers in the USSR</a><br />
+<div class="outline-text-5" id="text-orgd118276">
+<p>
+In Russian. An overview of how the Soviet computer industry came about
+and who the key figures were. Co-authored by Anatoly Kitov, one of the
+giants in the Soviet school of programming. If you'd like this to be
+translated to English, let <a href="mailto:wojciech.s.gac@gmail.com">me</a> know.
+</p>
+</div>
+</li>
 </ul>
 </div>
-<div id="outline-container-org97f697e" class="outline-3">
-<h3 id="org97f697e">Websites</h3>
-<div class="outline-text-3" id="text-org97f697e">
+<div id="outline-container-org6405654" class="outline-3">
+<h3 id="org6405654">Websites</h3>
+<div class="outline-text-3" id="text-org6405654">
 </div>
 <ul class="org-ul">
-<li><a id="org89c74ff"></a><a href="https://lainzine.org/">Lainzine</a><br />
-<div class="outline-text-5" id="text-org89c74ff">
+<li><a id="orga8442cc"></a><a href="https://lainzine.org/">Lainzine</a><br />
+<div class="outline-text-5" id="text-orga8442cc">
 <p>
 Zine associated with <a href="https://lainchan.org/">Lainchan</a>. All kinds of articles on
 programming, security, cryptography, cognition, art, politics,
@@ -425,21 +426,21 @@ etc.
 </li>
 </ul>
 </div>
-<div id="outline-container-orgb4ed2ac" class="outline-3">
-<h3 id="orgb4ed2ac">Operating Systems</h3>
-<div class="outline-text-3" id="text-orgb4ed2ac">
+<div id="outline-container-org13167c5" class="outline-3">
+<h3 id="org13167c5">Operating Systems</h3>
+<div class="outline-text-3" id="text-org13167c5">
 </div>
-<div id="outline-container-org819897d" class="outline-4">
-<h4 id="org819897d">Unix</h4>
-<div class="outline-text-4" id="text-org819897d">
+<div id="outline-container-org49acd4a" class="outline-4">
+<h4 id="org49acd4a">Unix</h4>
+<div class="outline-text-4" id="text-org49acd4a">
 <p>
 Unix, the archetypal hacker's choice. Love it or hate it. The
 UNiplexed Information and Computing Service is here to stay.
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orgc91ca5e"></a><a href="http://www.catb.org/~esr/writings/taoup/html/">The Art Of Unix Programming</a><br />
-<div class="outline-text-5" id="text-orgc91ca5e">
+<li><a id="orgb845aa4"></a><a href="http://www.catb.org/~esr/writings/taoup/html/">The Art Of Unix Programming</a><br />
+<div class="outline-text-5" id="text-orgb845aa4">
 <p>
 A book-sized overview of the Unix philosophy by Eric
 S. Raymond. This book will probably not teach you systems
@@ -449,16 +450,16 @@ principles and historical accidents.
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orgb01290e"></a><a href="http://www.catb.org/~esr/writings/taoup/html/ch02s01.html">Origins and History of Unix, 1969-1995</a><br />
-<div class="outline-text-6" id="text-orgb01290e">
+<li><a id="org9e0088a"></a><a href="http://www.catb.org/~esr/writings/taoup/html/ch02s01.html">Origins and History of Unix, 1969-1995</a><br />
+<div class="outline-text-6" id="text-org9e0088a">
 <p>
 Fairly detailed history of how Unix came to be. Entertaining and
 informative. Good companion to Peter Salus' book.
 </p>
 </div>
 </li>
-<li><a id="org15fc3eb"></a><a href="http://www.catb.org/~esr/writings/taoup/html/hackers.html">Origins and History of the Hackers, 1961-1995</a><br />
-<div class="outline-text-6" id="text-org15fc3eb">
+<li><a id="org94c0579"></a><a href="http://www.catb.org/~esr/writings/taoup/html/hackers.html">Origins and History of the Hackers, 1961-1995</a><br />
+<div class="outline-text-6" id="text-org94c0579">
 <p>
 History and folklore of the hacker community and how at some
 point it merged with the Unix folks.
@@ -467,19 +468,19 @@ point it merged with the Unix folks.
 </li>
 </ul>
 </li>
-<li><a id="org4f820f7"></a><a href="https://web.archive.org/web/20200731175107/http://www.groklaw.net/staticpages/index.php?page=20051013231901859">The Daemon, the GNU &amp; the Penguin</a><br />
-<div class="outline-text-5" id="text-org4f820f7">
+<li><a id="orge3aec5d"></a><a href="https://web.archive.org/web/20200731175107/http://www.groklaw.net/staticpages/index.php?page=20051013231901859">The Daemon, the GNU &amp; the Penguin</a><br />
+<div class="outline-text-5" id="text-orge3aec5d">
 <p>
 An in-depth history of Unix, GNU and Linux. Lots of tidbits,
 anecdotes and pointers to other resources.
 </p>
 </div>
 </li>
-<li><a id="org939925f"></a><a href="https://www.cs.dartmouth.edu/~doug/dmr.pdf">Doug McIlroy's appreciation of Dennis Ritchie</a><br /></li>
-<li><a id="org7793d15"></a><a href="https://www.bell-labs.com/usr/dmr/www/cacm.pdf">Ken &amp; Dennis' Unix paper from CACM '74</a><br /></li>
-<li><a id="orge079076"></a><a href="https://www.bell-labs.com/usr/dmr/www/">Dennis Ritchie's homepage - a treasure trove</a><br /></li>
-<li><a id="org0b8569b"></a><a href="http://www.ruddcanaday.com/adventures/">Rudd Canaday - My Adventures in Software</a><br />
-<div class="outline-text-5" id="text-org0b8569b">
+<li><a id="org6fe2840"></a><a href="https://www.cs.dartmouth.edu/~doug/dmr.pdf">Doug McIlroy's appreciation of Dennis Ritchie</a><br /></li>
+<li><a id="orgc9355ce"></a><a href="https://www.bell-labs.com/usr/dmr/www/cacm.pdf">Ken &amp; Dennis' Unix paper from CACM '74</a><br /></li>
+<li><a id="org47e7b5c"></a><a href="https://www.bell-labs.com/usr/dmr/www/">Dennis Ritchie's homepage - a treasure trove</a><br /></li>
+<li><a id="org22ae9f5"></a><a href="http://www.ruddcanaday.com/adventures/">Rudd Canaday - My Adventures in Software</a><br />
+<div class="outline-text-5" id="text-org22ae9f5">
 <p>
 A memoir of Rudd Canaday - one of the lesser known early
 contributors to Unix development. Canaday is claimed to be
@@ -489,9 +490,9 @@ greatly underappreciated in the history of Unix.
 </li>
 </ul>
 </div>
-<div id="outline-container-org6a83d98" class="outline-4">
-<h4 id="org6a83d98">Incompatible Timesharing System</h4>
-<div class="outline-text-4" id="text-org6a83d98">
+<div id="outline-container-orgf7b8cb2" class="outline-4">
+<h4 id="orgf7b8cb2">Incompatible Timesharing System</h4>
+<div class="outline-text-4" id="text-orgf7b8cb2">
 <p>
 The sound of a tree falling when there's nobody there to hear
 it. An ancient operating system designed and put together by the
@@ -502,8 +503,8 @@ but a memory. Or is it?
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orgbac716d"></a><a href="https://its.victor.se/wiki/">ITS Wiki</a><br />
-<div class="outline-text-5" id="text-orgbac716d">
+<li><a id="org9ff1f1b"></a><a href="https://its.victor.se/wiki/">ITS Wiki</a><br />
+<div class="outline-text-5" id="text-org9ff1f1b">
 <p>
 Björn Victor's wiki about the system. Contains both historical
 documents and more contemporary howtos aimed at emulated
@@ -512,8 +513,8 @@ Uppsala.
 </p>
 </div>
 </li>
-<li><a id="org704c9de"></a><a href="https://hack.org/mc/blog/its.html">MC's journal entry on ITS</a><br />
-<div class="outline-text-5" id="text-org704c9de">
+<li><a id="org100db4f"></a><a href="https://hack.org/mc/blog/its.html">MC's journal entry on ITS</a><br />
+<div class="outline-text-5" id="text-org100db4f">
 <p>
 Another Swede, another ITS aficionado. But seriously, MC (Michael
 Cardell Wiederkrantz) is very passionate about retrocomputing and
@@ -521,16 +522,16 @@ this entry is far from being the only one.
 </p>
 </div>
 </li>
-<li><a id="org8b89672"></a><a href="https://its.svensson.org/">Paul Svensson's ITS Page</a><br />
-<div class="outline-text-5" id="text-org8b89672">
+<li><a id="org4e687a8"></a><a href="https://its.svensson.org/">Paul Svensson's ITS Page</a><br />
+<div class="outline-text-5" id="text-org4e687a8">
 <p>
 What is it with Swedish ancestry and ITS? Unfortunately, this
 page is currently unavailable.
 </p>
 </div>
 </li>
-<li><a id="org699a49b"></a><a href="https://github.com/PDP-10">PDP-10 organization on GitHub</a><br />
-<div class="outline-text-5" id="text-org699a49b">
+<li><a id="org9ff34f6"></a><a href="https://github.com/PDP-10">PDP-10 organization on GitHub</a><br />
+<div class="outline-text-5" id="text-org9ff34f6">
 <p>
 One place to rule them all. Largely focused on ITS, but an
 occasional mention of TOPS-20 is not punished by death.
@@ -540,31 +541,31 @@ occasional mention of TOPS-20 is not punished by death.
 </ul>
 </div>
 </div>
-<div id="outline-container-org6ddf383" class="outline-3">
-<h3 id="org6ddf383">Retrocomputing</h3>
-<div class="outline-text-3" id="text-org6ddf383">
+<div id="outline-container-org1879669" class="outline-3">
+<h3 id="org1879669">Retrocomputing</h3>
+<div class="outline-text-3" id="text-org1879669">
 </div>
-<div id="outline-container-org42cc540" class="outline-4">
-<h4 id="org42cc540">Emulation</h4>
-<div class="outline-text-4" id="text-org42cc540">
+<div id="outline-container-orgfc4f0e8" class="outline-4">
+<h4 id="orgfc4f0e8">Emulation</h4>
+<div class="outline-text-4" id="text-orgfc4f0e8">
 </div>
 <ul class="org-ul">
-<li><a id="org90823ff"></a><a href="https://jamesfriend.com.au/pce-js/">Mac OS System 7</a><br />
-<div class="outline-text-5" id="text-org90823ff">
+<li><a id="orgaaf6194"></a><a href="https://jamesfriend.com.au/pce-js/">Mac OS System 7</a><br />
+<div class="outline-text-5" id="text-orgaaf6194">
 <p>
 An in-browser Mac emulator. Version 7.0.1
 </p>
 </div>
 </li>
-<li><a id="orgbd811b2"></a><a href="https://lively-web.org/users/bert/Smalltalk-78.html">Smalltalk-78 in Lively</a><br />
-<div class="outline-text-5" id="text-orgbd811b2">
+<li><a id="org88f3717"></a><a href="https://lively-web.org/users/bert/Smalltalk-78.html">Smalltalk-78 in Lively</a><br />
+<div class="outline-text-5" id="text-org88f3717">
 <p>
 Smalltalk-78 implementation in Lively, running on WebAssembly (?).
 </p>
 </div>
 </li>
-<li><a id="orgdd5163c"></a><a href="https://archive.org/details/canoncat">In-browser emulator of Canon Cat</a><br />
-<div class="outline-text-5" id="text-orgdd5163c">
+<li><a id="org180ec3c"></a><a href="https://archive.org/details/canoncat">In-browser emulator of Canon Cat</a><br />
+<div class="outline-text-5" id="text-org180ec3c">
 <p>
 Jef Raskin's original personal computer, now in your browser.
 </p>
@@ -576,8 +577,7 @@ Jef Raskin's original personal computer, now in your browser.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Wojciech S. Gac</p>
-<p class="date">Created: 2021-06-17 czw 23:39</p>
+<p class="date">Created: 2022-08-31 Wed 14:21</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
