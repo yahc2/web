@@ -26,5 +26,6 @@ contrary. But my optimism needs fuel and I've been running on empty
 for too long, hence this attempt at fueling it. It can be fun to adopt
 a certain smugness and view the entire technological landscape through
 a lens concisely embodied by the following image:
-[[file:images/js-good-parts.jpg]] Here I will genuinely try to rekindle my
-appreciation and sympathy for Python.
+[[file:images/js-good-parts.jpg]] Below I will genuinely try to rekindle
+my appreciation and sympathy for Python and maybe bring it a little
+closer to how I see Lisp in my head.
