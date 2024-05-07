@@ -1,0 +1,30 @@
+#+HTML_HEAD_EXTRA: <style> img { display:block; } </style>
+* Python - trying to appreciate the good bits
+Having arrived at another point when I'm about to start a new job and
+it being a largely Python job, I decided to try and compile a list of
+resources, hacks and observations that make Python decent and
+worthwhile. For a long time it's been the subject of my Lisp-centric
+bitching about the inadequacy of everything non-Lisp. It can be an
+alluring pose to adopt, similar to how some people find it
+existentially sooting to become professional victims. Don't get me
+wrong, I probably still think the Lisp family of languages is the
+bee's knees and I enjoy very much using CL as my goto language, but
+I've noticed the lispiness (of a job, library or project) have in the
+past tended to cloud my judgement and override other parts of the
+picture. To the extend I was willing to contemplate an objectively
+inferior position just to be able to hack Lisp.
+
+Trying to concentrate on the bits I find thought-provoking, gratifying
+or just plain fun is my attempt to exorcise out the creeping
+proclivity for cynicism that I've seen develop in too many a colleague
+at various workplaces. You probably know the rhetoric - today's
+technologies are inferior, we're way past the prime of our technical
+culture, the world is going to hell and dragging us with it. True?
+Maybe to some extent. Depressing? Definitely. Not that we should be
+willfully blind to negative tendencies around us - on the
+contrary. But my optimism needs fuel and I've been running on empty
+for too long, hence this attempt at fueling it. It can be fun to adopt
+a certain smugness and view the entire technological landscape through
+a lens concisely embodied by the following image:
+[[file:images/js-good-parts.jpg]] Here I will genuinely try to rekindle my
+appreciation and sympathy for Python.

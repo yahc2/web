@@ -55,7 +55,7 @@ steadily more complicated logical components using a very simple
 and intuitive hardware description language. Your efforts
 culminate in a design for a complete (albeit simple) CPU.
 **** [[https://www.zachtronics.com/last-call-bbs/][Last Call BBS]]
-Described as Zachtronics' "love letter" the early home computer
+Described as Zachtronics' "love letter" to the early home computer
 era. Set in the environment of a fictional Sawayama Z5 computer (also
 known from Exapunks), it feels like actually using the system,
 complete with modem sounds and limited bandwidth. The BBS system from
@@ -111,6 +111,11 @@ anecdotes and pointers to other resources.
 A memoir of Rudd Canaday - one of the lesser known early
 contributors to Unix development. Canaday is claimed to be
 greatly underappreciated in the history of Unix.
+**** [[https://www.youtube.com/watch?v=EY6q5dv_B-o][Brian Kernighan interviews Ken Thompson at VCF East 2019]]
+A very informal interview with Ken, showing how a great person can be
+humble, funny and down to earth.
+**** [[https://www.youtube.com/watch?v=wqI7MrtxPnk][Oral History with Ken Thompson]]
+Ken discussing everything from his youth, Unix, chess, Bell Labs etc.
 *** Incompatible Timesharing System
 The sound of a tree falling when there's nobody there to hear
 it. An ancient operating system designed and put together by the

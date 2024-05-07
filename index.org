@@ -7,3 +7,4 @@
 ** [[file:hacking-culture-and-hacking-spirit.org][Hacking Culture & Hacking Spirit]]
 ** [[file:interlisp.org][Interlisp, Maiko & Medley]]
 ** [[file:math-hacks.org][Mathematical Hacks]]
+** [[file:python.org][Python]]
