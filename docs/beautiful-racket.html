@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-12-09 Wed 09:05 -->
+<!-- 2026-08-27 Thu 11:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Beautiful Racket</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Raimon Grau" />
+<meta name="author" content="wga" />
+<meta name="generator" content="Org Mode" />
 <style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +42,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,47 +191,28 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/code-copy.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/search.css"/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/vendor/stickytableheaders/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/code-copy.js"></script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Beautiful Racket</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org36a13e5">refs</a></li>
+<li><a href="#org92345e2">refs</a></li>
 </ul>
 </div>
 </div>
@@ -250,17 +232,16 @@ at the semantic level on Racket.
 <p>
 Those DSLs use global variables, so there's an "easy way", in
 racket: <code>define</code> in the toplevel. The question is, what if I'd like
-to implement something that doesn't have a direct mapping<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> to
+to implement something that doesn't have a direct mapping<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> to
 the underneath Racket features?  Nice thing is that Racket has a
 shiton of features so it probably won't happen for the first 700
 Programming Languages you're gonna write, but the question still
 remains. Did I learn how to do everything? (without going into
 computability academic discussions)
 </p>
-
-<div id="outline-container-org36a13e5" class="outline-2">
-<h2 id="org36a13e5">refs</h2>
-<div class="outline-text-2" id="text-org36a13e5">
+<div id="outline-container-org92345e2" class="outline-2">
+<h2 id="org92345e2">refs</h2>
+<div class="outline-text-2" id="text-org92345e2">
 <ul class="org-ul">
 <li><a href="https://news.ycombinator.com/item?id=16454854">https://news.ycombinator.com/item?id=16454854</a> is a HN thread with
 interesting comments on that respect. Some rise the same concerns
@@ -275,15 +256,15 @@ Common Lisp.</li>
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
 
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
 Recently I skimmed over a couple of articles on convivality(
 <a href="http://akkartik.name/akkartik-convivial-20200315.pdf">http://akkartik.name/akkartik-convivial-20200315.pdf</a>,
 <a href="https://www.cs.kent.ac.uk/people/staff/srk21/research/talks/kell19software-slides.pdf">https://www.cs.kent.ac.uk/people/staff/srk21/research/talks/kell19software-slides.pdf</a>)
 . And ended up in this Gregor <a href="https://www.youtube.com/watch?v=5l2wMgm7ZOk&amp;list=RDCMUCHDr4RtxwA1KqKGwxgdK4Vg&amp;start_radio=1&amp;t=3478">Kiczales
-presentation.</a><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>
+presentation.</a><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
 Yay footnotes!
 </p></div></div>
 
@@ -291,8 +272,8 @@ Yay footnotes!
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="author">Author: Raimon Grau</p>
-<p class="date">Created: 2020-12-09 Wed 09:05</p>
+<p class="author">Author: wga</p>
+<p class="date">Created: 2026-08-27 Thu 11:41</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

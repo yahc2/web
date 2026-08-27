@@ -17,9 +17,9 @@ condition.
 ***** [[https://web.archive.org/web/20110721001434/http://www.peaceworkmagazine.org/pwork/0508/050814.htm][Edward Hasbrouck's review of the book]]
 **** [[https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396][Steven Levy - Hackers: Heroes of the Computer Revolution]]
 The canonical history of the hacker community. Divided into three
-parts dealing with the MIT hackers (60s mostly), West Coast
-hardware hackers (70s) and game hackers (80s). Perhaps too
-exalted at times, but still fun to read.
+parts dealing with the MIT hackers (60s mostly), West Coast hardware
+hackers (70s), and game hackers (80s). Perhaps too exalted at times,
+but still fun to read.
 ** Games
 **** [[http://www.zachtronics.com/eliza/][Eliza]]
 More a visual novel than game. Centers around Evelyn, who used to
@@ -60,7 +60,7 @@ era. Set in the environment of a fictional Sawayama Z5 computer (also
 known from Exapunks), it feels like actually using the system,
 complete with modem sounds and limited bandwidth. The BBS system from
 the title lets one download several games in the spirit of early days,
-including a logic-based dungeon puzzle, circuit simulator and
+including a logic-based dungeon puzzle, circuit simulator, and
 biohacking. If not the most exciting of Zachtronics games, it
 certainly gives off a nice vibe.
 ** Videos
@@ -103,7 +103,7 @@ History and folklore of the hacker community and how at some
 point it merged with the Unix folks.
 **** [[https://web.archive.org/web/20200731175107/http://www.groklaw.net/staticpages/index.php?page=20051013231901859][The Daemon, the GNU & the Penguin]]
 An in-depth history of Unix, GNU and Linux. Lots of tidbits,
-anecdotes and pointers to other resources.
+anecdotes, and pointers to other resources.
 **** [[https://www.cs.dartmouth.edu/~doug/dmr.pdf][Doug McIlroy's appreciation of Dennis Ritchie]]
 **** [[https://www.bell-labs.com/usr/dmr/www/cacm.pdf][Ken & Dennis' Unix paper from CACM '74]]
 **** [[https://www.bell-labs.com/usr/dmr/www/][Dennis Ritchie's homepage - a treasure trove]]
@@ -113,16 +113,16 @@ contributors to Unix development. Canaday is claimed to be
 greatly underappreciated in the history of Unix.
 **** [[https://www.youtube.com/watch?v=EY6q5dv_B-o][Brian Kernighan interviews Ken Thompson at VCF East 2019]]
 A very informal interview with Ken, showing how a great person can be
-humble, funny and down to earth.
+humble, funny, and down to earth.
 **** [[https://www.youtube.com/watch?v=wqI7MrtxPnk][Oral History with Ken Thompson]]
 Ken discussing everything from his youth, Unix, chess, Bell Labs etc.
 *** Incompatible Timesharing System
-The sound of a tree falling when there's nobody there to hear
-it. An ancient operating system designed and put together by the
-MIT hackers. Originated on the PDP-6, later transplanted to
-PDP-10. Birthplace of MacLisp, Scheme, Planner, Conniver, Emacs
-and many more. Featured extensively in [[*[[https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396\][Steven Levy - Hackers: Heroes of the Computer Revolution]\]][Levy's book]]. Today it is
-but a memory. Or is it?
+The sound of a tree falling when there's nobody there to hear it. An
+ancient operating system designed and put together by the MIT
+hackers. Originated on the PDP-6, later transplanted to
+PDP-10. Birthplace of MacLisp, Scheme, Planner, Conniver, Emacs and
+many more. Featured extensively in [[https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396][Levy's book]]. Today it is but a
+memory. Or is it?
 **** [[https://its.victor.se/wiki/][ITS Wiki]]
 Björn Victor's wiki about the system. Contains both historical
 documents and more contemporary howtos aimed at emulated
